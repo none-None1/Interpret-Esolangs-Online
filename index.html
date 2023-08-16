@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interpret Esolangs Online</title>
+</head>
+<body>
+<h3>Welcome to Interpret Esolangs Online</h3>
+<p>Interpret Esolangs Online allows you to run programs in various esoteric languages, including brainfuck, deadfish, etc.</p>
+<script src="alphuck.js"></script>
+<script src="aplwsi.js"></script>
+<script src="arithmetic.js"></script>
+<script src="brainfuck.js"></script>
+<script src="deadfish.js"></script>
+<script src="hq9p.js"></script>
+<script src="lstackg.js"></script>
+<script src="nil.js"></script>
+<script src="no.js"></script>
+<script src="nope.js"></script>
+<script src="quine.js"></script>
+<script src="text.js"></script>
+<script src="wee.js"></script>
+<script src="wte_teplw.js"></script>
+<select id="lang">
+    <option>Alphuck</option>
+    <option>APLWSI</option>
+    <option>Arithmetic</option>
+    <option>brainfuck</option>
+    <option>Deadfish</option>
+    <option>HQ9+</option>
+    <option>&lt;stack&gt;</option>
+    <option>Nil</option>
+    <option>No.</option>
+    <option>Nope.</option>
+    <option>Quine</option>
+    <option>Text</option>
+    <option>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>
+    <option>Welcome to Esolang, the esoteric programming languages wiki!</option>
+</select>
+<script>
+function run(){
+    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'brainfuck': brainfuck, 'Deadfish': deadfish, 'HQ9+': hq9p, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'Quine': quine, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
+    var langname=document.getElementById('lang').value;
+    var func=funcs[langname];
+    var code=document.getElementById('program').value;
+    var input=document.getElementById('input').value;
+    document.getElementById('log').value='';
+    const s = new Date().getTime();
+    var erroc=false;
+    try{
+        var output=func(code,input);
+    }catch(err){
+        document.getElementById('log').value=err.message+'\n';
+        erroc=true;
+    }
+    const e = new Date().getTime();
+    if(erroc){
+        document.getElementById('log').value=document.getElementById('log').value+`Program terminates in ${e-s} ms and raises an error.`;
+    }else{
+        document.getElementById('log').value=document.getElementById('log').value+`Program terminates in ${e-s} ms successfully.`;
+        document.getElementById('output').value=output;
+    }
+}
+</script>
+<br>
+<textarea id="program" cols=80 rows=20>code</textarea>
+<textarea id="input" cols=80 rows=20>input</textarea>
+<textarea id="output" cols=80 rows=20 readonly>output</textarea>
+<textarea id="log" cols=80 rows=20 readonly>log</textarea>
+<br>
+<button onclick="run()">Run</button>
+</body>

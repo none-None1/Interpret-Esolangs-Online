@@ -1,0 +1,3 @@
+function no(){
+    return 'No.';
+}
