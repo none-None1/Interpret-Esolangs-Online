@@ -62,6 +62,15 @@ function run(){
         document.getElementById('output').value=output;
     }
 }
+function upload(){
+    var ev=(window.event||event);
+    var file=ev.target.files[0];
+    var reader=new FileReader();
+    reader.onload = function(){
+        document.getElementById("program").value=reader.result;
+    }
+    reader.readAsText(file);
+}
 </script>
 <br>
 <textarea id="program" cols=80 rows=20>code</textarea>
@@ -70,6 +79,7 @@ function run(){
 <textarea id="log" cols=80 rows=20 readonly>log</textarea>
 <br>
 <button onclick="run()">Run</button>
+<input type="file" onchange="upload()"></input>
 <br>
 <a href="https://github.com/none-None1/Interpret-Esolangs-Online">The source code</a> of this webpage.
 <hr>
