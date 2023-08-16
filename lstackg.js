@@ -7,7 +7,7 @@ function lstackg(code,input){
         }
         if(code[i]=='>'){
             if(par.length==0){
-                return 'Unmatched >';
+                throw new Error('Unmatched >');
             }
             var b=par.pop();
             match[b]=i;
@@ -15,7 +15,7 @@ function lstackg(code,input){
         }
     }
     if(par.length!=0){
-        return 'Unmatched <';
+        throw new Error('Unmatched <');
     }
     while(cp<code.length){
         if('<stack>'.includes(code[cp])==false){
