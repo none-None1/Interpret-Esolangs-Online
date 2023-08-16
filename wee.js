@@ -46,5 +46,7 @@ function wee(program,input){
             return output;
         }
     }
-    return output;
+    while(1){
+        
+    }
 }
