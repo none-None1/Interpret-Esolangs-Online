@@ -236,4 +236,3 @@ function befunge(program,input){
         }
     }
 }
-console.log(befunge(`<@,+2*48_,#! #:<,_$#-:#*8#4<8"`))
