@@ -37,14 +37,14 @@ function brainfuck(program,input){
         }
         if(program[ip]=='>'){
             p=p+1;
-            if(tape[p]>=1000000){
+            if(p>=1000000){
                 throw new Error('Pointer overflow');
             }
             ip=ip+1;
         }
         if(program[ip]=='<'){
             p=p-1;
-            if(tape[p]<0){
+            if(p<0){
                 throw new Error('Pointer underflow');
             }
             ip=ip+1;
