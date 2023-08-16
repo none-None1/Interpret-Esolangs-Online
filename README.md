@@ -6,6 +6,7 @@ It currently supports the following:
 * [Arithmetic](https://esolangs.org/wiki/Arithmetic)
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
+* [Hello](https://esolangs.org/wiki/Hello)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
 * [&lt;stack&gt;](https://esolangs.org/wiki/LstackG)
 * [Nil](https://esolangs.org/wiki/Nil)
