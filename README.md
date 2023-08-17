@@ -14,6 +14,8 @@ It currently supports the following:
 * [No.](https://esolangs.org/wiki/No%2E)
 * [Nope.](https://esolangs.org/wiki/Nope%2E)
 * [Quine.](https://esolangs.org/wiki/Quine_(programming_language))
+* [Self-modifying Brainfuck](https://esolangs.org/wiki/Self-modifying_Brainfuck)
+* [Random Brainfuck](https://esolangs.org/wiki/Random_Brainfuck)
 * [Text](https://esolangs.org/wiki/Text)
 * [Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee](https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee)
 * [Welcome to Esolang, the esoteric programming languages wiki!](https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!)
