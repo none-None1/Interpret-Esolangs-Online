@@ -73,6 +73,12 @@ function upload(){
     }
     reader.readAsText(file);
 }
+function store(){
+    var link=document.createElement('a');
+    link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.getElementById('program').value));
+    link.setAttribute('download','program-'+Math.floor(Math.random()*1000000000)+'.txt');
+    link.click();
+}
 </script>
 <br>
 <textarea id="program" cols=80 rows=20>code</textarea>
@@ -81,6 +87,7 @@ function upload(){
 <textarea id="log" cols=80 rows=20 readonly>log</textarea>
 <br>
 <button onclick="run()">Run</button>
+<button onclick="store()">Download code as text file</button>
 <input type="file" onchange="upload()"></input>
 <br>
 <a href="https://github.com/none-None1/Interpret-Esolangs-Online">The source code</a> of this webpage.
