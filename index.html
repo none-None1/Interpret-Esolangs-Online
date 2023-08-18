@@ -83,6 +83,17 @@ function store(){
     link.setAttribute('download','program-'+Math.floor(Math.random()*1000000000)+'.txt');
     link.click();
 }
+function create_link(){
+    var prog=btoa(document.getElementById('program').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
+    var input=btoa(document.getElementById('input').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
+    var lang=btoa(document.getElementById('lang').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
+    var urlname=window.location.href+'?'+'lang='+lang+'&code='+prog+'&input='+input;
+    var encoded=btoa(urlname).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
+    var link=document.createElement('a');
+    link.setAttribute('href','link.html?link='+encoded);
+    link.setAttribute('target','_blank');
+    link.click();
+}
 </script>
 <br>
 <textarea id="program" cols=80 rows=20>code</textarea>
@@ -90,9 +101,29 @@ function store(){
 <textarea id="output" cols=80 rows=20 readonly>output</textarea>
 <textarea id="log" cols=80 rows=20 readonly>log</textarea>
 <br>
-<button onclick="run()">Run</button>
-<button onclick="store()">Download code as text file</button>
-<input type="file" onchange="upload()"></input>
+<script>
+var args=new URLSearchParams(window.location.search);
+var flag=0;
+if(args.has('lang')){
+    document.getElementById('lang').value=atob(args.get('lang').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
+    flag=1;
+}
+if(args.has('code')){
+    document.getElementById('program').value=atob(args.get('code').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
+    flag=1;
+}
+if(args.has('input')){
+    document.getElementById('input').value=atob(args.get('input').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
+    flag=1;
+}
+if(flag){
+    run();
+}
+</script>
+<button onclick="run()" title="Executes the program">Run</button>
+<button onclick="create_link()" title="Creates a permanent link that can later be used to execute the same program">Create permanent link</button>
+<button onclick="store()" title="Download the program as a text file">Download code as text file</button>
+<input type="file" onchange="upload()" title="Upload a local file to the webpage"></input>
 <br>
 <a href="https://github.com/none-None1/Interpret-Esolangs-Online">The source code</a> of this webpage.
 <hr>
