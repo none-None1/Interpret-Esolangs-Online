@@ -87,7 +87,7 @@ function create_link(){
     var prog=btoa(document.getElementById('program').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
     var input=btoa(document.getElementById('input').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
     var lang=btoa(document.getElementById('lang').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-    var urlname=window.location.href+'?'+'lang='+lang+'&code='+prog+'&input='+input;
+    var urlname=window.location.href.split('?')[0]+'?'+'lang='+lang+'&code='+prog+'&input='+input;
     var encoded=btoa(urlname).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
     var link=document.createElement('a');
     link.setAttribute('href','link.html?link='+encoded);
