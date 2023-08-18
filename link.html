@@ -15,13 +15,13 @@
     visibility: visible;
 }
 </style>
-<h3 id="link_t" class="withdrawn">Raw Link</h3>
+<h3 id="link_t" class="withdrawn">Raw Link</h3><button onclick="copytext('link')">Copy</button>
 <textarea id="link" cols=80 rows=20 readonly class="withdrawn"></textarea><br>
-<h3 id="md_t" class="withdrawn">Markdown</h3>
+<h3 id="md_t" class="withdrawn">Markdown</h3><button onclick="copytext('md')">Copy</button>
 <textarea id="md" cols=80 rows=20 readonly class="withdrawn"></textarea><br>
-<h3 id="mw_t" class="withdrawn">MediaWiki</h3>
+<h3 id="mw_t" class="withdrawn">MediaWiki</h3><button onclick="copytext('mw')">Copy</button>
 <textarea id="mw" cols=80 rows=20 readonly class="withdrawn"></textarea><br>
-<h3 id="ht_t" class="withdrawn">HTML</h3>
+<h3 id="ht_t" class="withdrawn">HTML</h3><button onclick="copytext('ht')">Copy</button>
 <textarea id="ht" cols=80 rows=20 readonly class="withdrawn"></textarea><br>
 <script>
 var args=new URLSearchParams(window.location.search);
@@ -42,6 +42,15 @@ if(args.has('link')){
     document.getElementById('ht').className='shown';
     document.getElementById('ht_t').className='shown';
     document.getElementById('ht').value=`<a href="${decoded}">${lang}</a>`;
+}
+function copytext(id){
+    try{
+        navigator.clipboard.writeText(document.getElementById(id).value);
+    }catch(err){
+        alert('Copy failed');
+        return;
+    }
+    alert('Copy success');
 }
 </script>
 </body>
