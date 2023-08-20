@@ -14,6 +14,7 @@
 <script src="brainfuck.js"></script>
 <script src="deadfish.js"></script>
 <script src="hello.js"></script>
+<script src="hellopp.js"></script>
 <script src="hq9p.js"></script>
 <script src="lstackg.js"></script>
 <script src="nil.js"></script>
@@ -34,6 +35,7 @@
     <option>brainfuck</option>
     <option>Deadfish</option>
     <option>Hello</option>
+    <option>Hello++</option>
     <option>HQ9+</option>
     <option>&lt;stack&gt;</option>
     <option>Nil</option>
@@ -48,7 +50,7 @@
 </select>
 <script>
 function run(){
-    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Deadfish': deadfish, 'Hello': hello, 'HQ9+': hq9p, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'Quine': quine, 'Random Brainfuck': rbf, 'Self-modifying Brainfuck': smbf, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
+    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'Quine': quine, 'Random Brainfuck': rbf, 'Self-modifying Brainfuck': smbf, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
     var langname=document.getElementById('lang').value;
     var func=funcs[langname];
     var code=document.getElementById('program').value;

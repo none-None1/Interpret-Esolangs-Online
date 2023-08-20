@@ -9,6 +9,7 @@ It currently supports the following:
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
 * [Hello](https://esolangs.org/wiki/Hello)
+* [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
 * [&lt;stack&gt;](https://esolangs.org/wiki/LstackG)
 * [Nil](https://esolangs.org/wiki/Nil)
@@ -23,3 +24,5 @@ It currently supports the following:
 
 ### How to use?
 Just click the run button!
+
+You can also generate permanent links of programs. However, it you want to do that, your program should **not** be too long.
