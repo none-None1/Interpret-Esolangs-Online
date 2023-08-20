@@ -30,7 +30,7 @@ function brainfeed(program,input){
             tape[p]--;
         }
         if(i=='.'){
-            output+=tape[p]+' ';
+            output+=tape[p];
         }
         if(i==','){
             output+='abcdefghijklmnopqrstuvwxyz'[tape[p]];
@@ -51,7 +51,7 @@ function brainfeed(program,input){
                     cnt++;
                 }
             }
-            output+=cnt+' ';
+            output+=cnt;
         }
         if(i=='^'){
             tape[p]=input.charCodeAt(0)-48;
@@ -76,7 +76,7 @@ function brainfeed(program,input){
             mem=p;
         }
         if(i=='%'){
-            output+=p+' ';
+            output+=p;
         }
         if(i=='&'){
             p=Math.floor(Math.random()*18);
