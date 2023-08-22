@@ -12,6 +12,7 @@
 <script src="befunge.js"></script>
 <script src="brainfeed.js"></script>
 <script src="brainfuck.js"></script>
+<script src="chicken.js"></script>
 <script src="deadfish.js"></script>
 <script src="hello.js"></script>
 <script src="hellopp.js"></script>
@@ -34,6 +35,7 @@
     <option>Befunge-93</option>
     <option>!!brainfeed</option>
     <option>brainfuck</option>
+    <option>Chicken</option>
     <option>Deadfish</option>
     <option>Hello</option>
     <option>Hello++</option>
@@ -52,7 +54,7 @@
 </select>
 <script>
 function run(){
-    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'Quine': quine, 'Random Brainfuck': rbf, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
+    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'Quine': quine, 'Random Brainfuck': rbf, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
     var langname=document.getElementById('lang').value;
     var func=funcs[langname];
     var code=document.getElementById('program').value;
