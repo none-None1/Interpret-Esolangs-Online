@@ -86,7 +86,6 @@ function smbf(program,input){
         if(!('+-,.[]<>'.includes(program[ip]))){
             ip=ip+1;
         }
-        console.log(tape.slice(100));
     }
     return output;
 }
