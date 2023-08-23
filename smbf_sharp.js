@@ -1,5 +1,5 @@
 // The real name of the language is Self-modifying Brainfuck#
-function smbf(program,input){
+function smbf_sharp(program,input){
     var loop=0;
     var matches={};
     var ip=100;
