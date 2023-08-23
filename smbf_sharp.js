@@ -2,20 +2,20 @@
 function smbf_sharp(program,input){
     var loop=0;
     var matches={};
-    var ip=100;
+    var ip=0;
     var tape=[];
-    var p=100;
+    var p=0;
     var output='';
-    for(let i=0;i<100;i++){
-        tape.push(0); // Some programs may not run correctly without this
-    }
     for(let i of program){
         tape.push(i.charCodeAt(0));
     }
     for(let i=0;i<1000000;i++){
         tape.push(0);
     }
-    while(ip<program.length+100){
+    while(ip<program.length){
+        console.log(ip);
+        console.log(String.fromCharCode(tape[ip]));
+        console.log(tape.slice(0,40));
         if(String.fromCharCode(tape[ip])=='+'){
             tape[p]=tape[p]+1;
             if(tape[p]==256) tape[p]=0;
@@ -78,6 +78,7 @@ function smbf_sharp(program,input){
                 if(String.fromCharCode(tape[ip])==']'){
                     loop++;
                 }
+                console.log(loop,ip,tape[ip]);
             }
         }
         if(!('+-,.[]<>'.includes(String.fromCharCode(tape[ip])))){
