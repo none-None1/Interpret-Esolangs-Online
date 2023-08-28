@@ -17,10 +17,12 @@
 <script src="hello.js"></script>
 <script src="hellopp.js"></script>
 <script src="hq9p.js"></script>
+<script src="hworld.js"></script>
 <script src="lstackg.js"></script>
 <script src="nil.js"></script>
 <script src="no.js"></script>
 <script src="nope.js"></script>
+<script src="plusorminus.js"></script>
 <script src="quine.js"></script>
 <script src="rbf.js"></script>
 <script src="smbf.js"></script>
@@ -40,10 +42,12 @@
     <option>Hello</option>
     <option>Hello++</option>
     <option>HQ9+</option>
+    <option>HWorld</option>
     <option>&lt;stack&gt;</option>
     <option>Nil</option>
     <option>No.</option>
     <option>Nope.</option>
+    <option>PlusOrMinus</option>
     <option>Quine</option>
     <option>Random Brainfuck</option>
     <option>Self-modifying Brainfuck</option>
@@ -54,7 +58,7 @@
 </select>
 <script>
 function run(){
-    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'Quine': quine, 'Random Brainfuck': rbf, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
+    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'PlusOrMinus': plusorminus, 'Quine': quine, 'Random Brainfuck': rbf, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
     var langname=document.getElementById('lang').value;
     var func=funcs[langname];
     var code=document.getElementById('program').value;
