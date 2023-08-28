@@ -1,4 +1,4 @@
-function hworld(progam,input){
+function hworld(program,input){
     if(program=='h'){
         return 'Hello!';
     }
