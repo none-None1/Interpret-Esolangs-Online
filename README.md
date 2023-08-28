@@ -17,6 +17,7 @@ It currently supports the following:
 * [Nil](https://esolangs.org/wiki/Nil)
 * [No.](https://esolangs.org/wiki/No%2E)
 * [Nope.](https://esolangs.org/wiki/Nope%2E)
+* [oOo CODE](https://esolangs.org/wiki/oOo_CODE)
 * [PlusOrMinus](https://esolangs.org/wiki/PlusOrMinus)
 * [Quine.](https://esolangs.org/wiki/Quine_(programming_language))
 * [Self-modifying Brainfuck](https://esolangs.org/wiki/Self-modifying_Brainfuck)
