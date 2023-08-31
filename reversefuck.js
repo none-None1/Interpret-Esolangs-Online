@@ -14,7 +14,7 @@ function reversefuck(program,input){
         }
         if(program[i]=='['){
             if(stack.length==0){
-                throw new Error('Right bracket does not match left bracket');
+                throw new Error('Left bracket does not match right bracket');
             }
             var mt=stack.pop();
             matches[mt]=i;
@@ -22,7 +22,7 @@ function reversefuck(program,input){
         }
     }
     if(stack.length!=0){
-        throw new Error('Left bracket does not match right bracket');
+        throw new Error('Right bracket does not match left bracket');
     }
     while(ip<program.length){
         if(program[ip]=='-'){
