@@ -4,6 +4,7 @@ It currently supports the following:
 * [Alphuck](https://esolangs.org/wiki/Alphuck)
 * [APLWSI](https://esolangs.org/wiki/APLWSI)
 * [Arithmetic](https://esolangs.org/wiki/Arithmetic)
+* [B2C](https://esolangs.org/wiki/B2C)
 * [Befunge-93](https://esolangs.org/wiki/Befunge)
 * [!!brainfeed](https://esolangs.org/wiki/!!brainfeed)
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
