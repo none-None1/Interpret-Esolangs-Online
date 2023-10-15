@@ -9,6 +9,7 @@
 <script src="alphuck.js"></script>
 <script src="aplwsi.js"></script>
 <script src="arithmetic.js"></script>
+<script src="b2c.js"></script>
 <script src="befunge.js"></script>
 <script src="brainfeed.js"></script>
 <script src="brainfuck.js"></script>
@@ -38,6 +39,7 @@
     <option>Alphuck</option>
     <option>APLWSI</option>
     <option>Arithmetic</option>
+    <option>B2C</option>
     <option>Befunge-93</option>
     <option>!!brainfeed</option>
     <option>brainfuck</option>
@@ -66,7 +68,7 @@
 </select>
 <script>
 function run(){
-    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'oOo CODE': ooocode, 'PlusIntMinus': plusintminus, 'PlusOrMinus': plusorminus, 'pRINT': print, 'Quine': quine, 'Random Brainfuck': rbf, 'ReverseFuck': reversefuck, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
+    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'B2C': b2c, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'oOo CODE': ooocode, 'PlusIntMinus': plusintminus, 'PlusOrMinus': plusorminus, 'pRINT': print, 'Quine': quine, 'Random Brainfuck': rbf, 'ReverseFuck': reversefuck, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
     var langname=document.getElementById('lang').value;
     var func=funcs[langname];
     var code=document.getElementById('program').value;
