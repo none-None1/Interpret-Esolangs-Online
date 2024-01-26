@@ -11,6 +11,7 @@
 <script src="arithmetic.js"></script>
 <script src="b2c.js"></script>
 <script src="befunge.js"></script>
+<script src="bfp2.js"></script>
 <script src="brainfeed.js"></script>
 <script src="brainfuck.js"></script>
 <script src="chicken.js"></script>
@@ -41,6 +42,7 @@
     <option>Arithmetic</option>
     <option>B2C</option>
     <option>Befunge-93</option>
+    <option>Brainfuck+2</option>
     <option>!!brainfeed</option>
     <option>brainfuck</option>
     <option>Chicken</option>
@@ -68,7 +70,7 @@
 </select>
 <script>
 function run(){
-    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'B2C': b2c, 'Befunge-93': befunge, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'oOo CODE': ooocode, 'PlusIntMinus': plusintminus, 'PlusOrMinus': plusorminus, 'pRINT': print, 'Quine': quine, 'Random Brainfuck': rbf, 'ReverseFuck': reversefuck, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
+    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'B2C': b2c, 'Befunge-93': befunge, 'Brainfuck+2': bfp2, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'oOo CODE': ooocode, 'PlusIntMinus': plusintminus, 'PlusOrMinus': plusorminus, 'pRINT': print, 'Quine': quine, 'Random Brainfuck': rbf, 'ReverseFuck': reversefuck, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
     var langname=document.getElementById('lang').value;
     var func=funcs[langname];
     var code=document.getElementById('program').value;
@@ -118,10 +120,10 @@ function create_link(){
 }
 </script>
 <br>
-<textarea id="program" cols=80 rows=20>code</textarea>
-<textarea id="input" cols=80 rows=20>input</textarea>
-<textarea id="output" cols=80 rows=20 readonly>output</textarea>
-<textarea id="log" cols=80 rows=20 readonly>log</textarea>
+<textarea id="program" cols=80 rows=20 placeholder="code"></textarea>
+<textarea id="input" cols=80 rows=20 placeholder="input"></textarea>
+<textarea id="output" cols=80 rows=20 readonly placeholder="output"></textarea>
+<textarea id="log" cols=80 rows=20 readonly placeholder="log"></textarea>
 <br>
 <script>
 var args=new URLSearchParams(window.location.search);

@@ -26,7 +26,6 @@ function bfp2(program,input){
         throw new Error('Left bracket does not match right bracket');
     }
     while(ip<program.length){
-        console.log(ip,tape.slice(0,10));
         if(program[ip]=='+'){
             tape[p]=tape[p]+1;
             ip=ip+1;
@@ -64,8 +63,8 @@ function bfp2(program,input){
         }
         if(program[ip]==';'){
             matched=input.match(/\d*\s*/);
-            input=input.slice(matched.length);
-            matched=matched.match(/\d*/);
+            input=input.slice(matched[0].length);
+            matched=matched[0].match(/\d*/)[0];
             if(isNaN(parseInt(matched))){
                 tape[p]=0;
             }else{
@@ -79,6 +78,7 @@ function bfp2(program,input){
         }
         if(program[ip]=='\''){
             overflow=!overflow;
+            ip=ip+1;
         }
         if(program[ip]=='['){
             if(tape[p]==0){
