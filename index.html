@@ -114,7 +114,7 @@ function create_link(){
     var urlname=window.location.href.split('#')[0]+'#'+btoa(lang+'\x00'+prog+'\x00'+input);
     var encoded=btoa(urlname).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
     var link=document.createElement('a');
-    link.setAttribute('href','link.html?link='+encoded);
+    link.setAttribute('href','link.html#'+encoded);
     link.setAttribute('target','_blank');
     link.click();
 }
