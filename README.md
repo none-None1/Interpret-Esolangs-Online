@@ -34,4 +34,4 @@ It currently supports the following:
 ### How to use?
 Just click the run button!
 
-You can also generate permanent links of programs. However, it you want to do that, your program should **not** be too long.
+You can also generate permanent links of programs. However, it you want to do that, <s>your program should **not** be too long.</s> URL length limit no longer exists!
