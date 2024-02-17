@@ -108,10 +108,10 @@ function store(){
     link.click();
 }
 function create_link(){
-    var prog=btoa(document.getElementById('program').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-    var input=btoa(document.getElementById('input').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-    var lang=btoa(document.getElementById('lang').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-    var urlname=window.location.href.split('?')[0]+'?'+'lang='+lang+'&code='+prog+'&input='+input;
+    var prog=encodeURIComponent(document.getElementById('program').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
+    var input=encodeURIComponent(document.getElementById('input').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
+    var lang=encodeURIComponent(document.getElementById('lang').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
+    var urlname=window.location.href.split('#')[0]+'#'+btoa(lang+'\x00'+prog+'\x00'+input);
     var encoded=btoa(urlname).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
     var link=document.createElement('a');
     link.setAttribute('href','link.html?link='+encoded);
@@ -126,22 +126,31 @@ function create_link(){
 <textarea id="log" cols=80 rows=20 readonly placeholder="log"></textarea>
 <br>
 <script>
-var args=new URLSearchParams(window.location.search);
-var flag=0;
-if(args.has('lang')){
-    document.getElementById('lang').value=atob(args.get('lang').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
-    flag=1;
-}
-if(args.has('code')){
-    document.getElementById('program').value=atob(args.get('code').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
-    flag=1;
-}
-if(args.has('input')){
-    document.getElementById('input').value=atob(args.get('input').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
-    flag=1;
-}
-if(flag){
-    run();
+if(!window.location.hash){ // old permalink encoding method
+    var args=new URLSearchParams(window.location.search);
+    var flag=0;
+    if(args.has('lang')){
+        document.getElementById('lang').value=atob(args.get('lang').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
+        flag=1;
+    }
+    if(args.has('code')){
+        document.getElementById('program').value=atob(args.get('code').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
+        flag=1;
+    }
+    if(args.has('input')){
+        document.getElementById('input').value=atob(args.get('input').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
+        flag=1;
+    }
+    if(flag){
+        run();
+    }
+}else{
+    if(window.location.hash.slice(1)){
+        var debase64=atob(window.location.hash.slice(1).replaceAll('_','/').replaceAll('-','+')).split('\x00');
+        document.getElementById('lang').value=decodeURIComponent(debase64[0]);
+        document.getElementById('program').value=decodeURIComponent(debase64[1]);
+        document.getElementById('input').value=decodeURIComponent(debase64[2]);
+    }
 }
 </script>
 <button onclick="run()" title="Executes the program">Run</button>
