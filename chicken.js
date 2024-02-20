@@ -7,7 +7,7 @@ function chicken(program,input){
     for(let i of program.split('\n')){
         cmd.push(i.split(' ').filter(x => x=='chicken').length);
     }
-    stack.push(stack);
+    stack.push(undefined);
     stack.push(input);
     stack=stack.concat(cmd);
     stack.push(0);
@@ -16,7 +16,10 @@ function chicken(program,input){
         c=stack[ip];
         switch(c){
             case 0:{
-                return stack.pop();
+
+                return stack.pop().replace(/\&\#\d+\;/g,(num)=>{
+                    return String.fromCharCode(num.slice(2,num.length-1));
+                });
             }
             case 1:{
                 stack.push('chicken');break;
@@ -39,7 +42,8 @@ function chicken(program,input){
             }
             case 6:{
                 var a=stack.pop();
-                stack.push(stack[stack[ip+1],a]);
+                if(stack[ip+1]==0) stack.push(stack[a]);
+                else stack.push(stack[stack[ip+1]][a]);
                 ip++;break;
             }
             case 7:{
@@ -56,7 +60,7 @@ function chicken(program,input){
             }
             case 9:{
                 var ch=stack.pop();
-                stack.push(String.fromCharCode(ch));break;
+                stack.push('&#'+ch+';');break;
             }
             default:{
                 stack.push(c-10);break;
