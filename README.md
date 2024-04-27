@@ -7,6 +7,7 @@ It currently supports the following:
 * [B2C](https://esolangs.org/wiki/B2C)
 * [Befunge-93](https://esolangs.org/wiki/Befunge)
 * [Brainfuck+2](https://esolangs.org/wiki/Brainfuck%2B2)
+* [Brainalpha](https://esolangs.org/wiki/Brainalpha)
 * [!!brainfeed](https://esolangs.org/wiki/!!brainfeed)
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
 * [Chicken](https://esolangs.org/wiki/Chicken)
