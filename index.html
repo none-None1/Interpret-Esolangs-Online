@@ -16,6 +16,7 @@
 <script defer src="brainfeed.js"></script>
 <script defer src="brainfuck.js"></script>
 <script defer src="chicken.js"></script>
+<script defer src="dead_fish.js"></script>
 <script defer src="deadfish.js"></script>
 <script defer src="hello.js"></script>
 <script defer src="hellopp.js"></script>
@@ -48,6 +49,7 @@
     <option>!!brainfeed</option>
     <option>brainfuck</option>
     <option>Chicken</option>
+    <option>&gt;&lt;x&gt;</option>
     <option>Deadfish</option>
     <option>Hello</option>
     <option>Hello++</option>
@@ -72,7 +74,7 @@
 </select>
 <script>
 function run(){
-    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'B2C': b2c, 'Befunge-93': befunge, 'Brainfuck+2': bfp2, 'Brainalpha': brainalpha, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'oOo CODE': ooocode, 'PlusIntMinus': plusintminus, 'PlusOrMinus': plusorminus, 'pRINT': print, 'Quine': quine, 'Random Brainfuck': rbf, 'ReverseFuck': reversefuck, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
+    var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'B2C': b2c, 'Befunge-93': befunge, 'Brainfuck+2': bfp2, 'Brainalpha': brainalpha, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, '><x>': dead_fish, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'oOo CODE': ooocode, 'PlusIntMinus': plusintminus, 'PlusOrMinus': plusorminus, 'pRINT': print, 'Quine': quine, 'Random Brainfuck': rbf, 'ReverseFuck': reversefuck, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
     var langname=document.getElementById('lang').value;
     var func=funcs[langname];
     var code=document.getElementById('program').value;

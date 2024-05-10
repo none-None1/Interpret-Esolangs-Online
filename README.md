@@ -11,6 +11,7 @@ It currently supports the following:
 * [!!brainfeed](https://esolangs.org/wiki/!!brainfeed)
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
 * [Chicken](https://esolangs.org/wiki/Chicken)
+* [&gt;&lt;x&gt;](https://esolangs.org/wiki/Dead_fish)
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
 * [Hello](https://esolangs.org/wiki/Hello)
 * [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
