@@ -17,7 +17,7 @@ function chicken(program,input){
         switch(c){
             case 0:{
 
-                return stack.pop().replace(/\&\#\d+\;/g,(num)=>{
+                return `${stack.pop()}`.replace(/\&\#\d+\;/g,(num)=>{
                     return String.fromCharCode(num.slice(2,num.length-1));
                 });
             }

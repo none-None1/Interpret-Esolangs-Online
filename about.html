@@ -1,189 +1,380 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>About Interpret Esolangs Online</title>
-</head>
-<body>
-<p>
-Interpret Esolangs Online 2.0.4
-<br>
-This is a webpage that interprets esoteric languages in client-side JavaScript.
-Currently, this supports 32 languages.
-<br>
-Here is the detailed information about the languages:
-<table border="1">
-    <thead>
-      <tr>
-        <th>Language Name</th>
-        <th>Information about interpreter</th>
-        <th>Link to esolangs.org</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Alphuck</td>
-        <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
-        <td><a href="https://esolangs.org/wiki/Alphuck">https://esolangs.org/wiki/Alphuck</a></td>
-      </tr>
-      <tr>
-        <td>APLWSI</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/APLWSI">https://esolangs.org/wiki/APLWSI</a></td>
-      </tr>
-      <tr>
-        <td>Arithmetic</td>
-        <td>A slight modification of the interpreter by the esolang user PythonshellDebugwindow in public domain</td>
-        <td><a href="https://esolangs.org/wiki/Arithmetic">https://esolangs.org/wiki/Arithmetic</a></td>
-      </tr>
-      <tr>
-        <td>B2C</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/B2C">https://esolangs.org/wiki/B2C</a></td>
-      </tr>
-      <tr>
-        <td>Befunge-93</td>
-        <td>Unrestricted playfield size, division or modulo by zero results in 0</td>
-        <td><a href="https://esolangs.org/wiki/Befunge">https://esolangs.org/wiki/Befunge</a></td>
-      </tr>
-      <tr>
-        <td>Brainfuck+2</td>
-        <td>1000000 cells</td>
-        <td><a href="https://esolangs.org/wiki/Brainfuck%2B2">https://esolangs.org/wiki/Brainfuck%2B2</a></td>
-      </tr>
-      <tr>
-        <td>Brainalpha+2</td>
-        <td>1000000 cells</td>
-        <td><a href="https://esolangs.org/wiki/Brainalpha">https://esolangs.org/wiki/Brainalpha</a></td>
-      </tr>
-      <tr>
-        <td>!!brainfeed</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/!!brainfeed">https://esolangs.org/wiki/!!brainfeed</a></td>
-      </tr>
-      <tr>
-        <td>brainfuck</td>
-        <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
-        <td><a href="https://esolangs.org/wiki/Brainfuck">https://esolangs.org/wiki/Brainfuck</a></td>
-      </tr>
-      <tr>
-        <td>Chicken</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/Chicken">https://esolangs.org/wiki/Chicken</a></td>
-      </tr>
-      <tr>
-        <td>&gt;&lt;x&gt;</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/Dead_fish">https://esolangs.org/wiki/Dead_fish</a></td>
-      </tr>
-      <tr>
-        <td>Deadfish</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/Deadfish">https://esolangs.org/wiki/Deadfish</a></td>
-      </tr>
-      <tr>
-        <td>Hello</td>
-        <td>Case sensitive, outputs "Hello World" and a line feed for every h command</td>
-        <td><a href="https://esolangs.org/wiki/Hello">https://esolangs.org/wiki/Hello</a></td>
-      </tr>
-      <tr>
-        <td>Hello++</td>
-        <td>Case insensitive, outputs "Hello World" and a line feed for every h (or H) command</td>
-        <td><a href="https://esolangs.org/wiki/Hello%2B%2B">https://esolangs.org/wiki/Hello%2B%2B</a></td>
-      </tr>
-      <tr>
-        <td>HQ9+</td>
-        <td>Doesn't output the accumulator in the + command</td>
-        <td><a href="https://esolangs.org/wiki/HQ9%2B">https://esolangs.org/wiki/HQ9%2B</a></td>
-      </tr>
-      <tr>
-        <td>HWorld</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/HWorld">https://esolangs.org/wiki/HWorld</a></td>
-      </tr>
-      <tr>
-        <td>&lt;stack&gt;</td>
-        <td>Interpreter comes from <a href="https://github.com/none-None1/lstackg/">https://github.com/none-None1/lstackg/</a> which is in public domain</td>
-        <td><a href="https://esolangs.org/wiki/LstackG">https://esolangs.org/wiki/LstackG</a></td>
-      </tr>
-      <tr>
-        <td>Nil</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/Nil">https://esolangs.org/wiki/Nil</a></td>
-      </tr>
-      <tr>
-        <td>No.</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/No%2E">https://esolangs.org/wiki/No%2E</a></td>
-      </tr>
-      <tr>
-        <td>Nope.</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/Nope%2E">https://esolangs.org/wiki/Nope%2E</a></td>
-      </tr>
-      <tr>
-        <td>oOo CODE</td>
-        <td>Supports wraps, EOF results in 0, 1000000 8-bit cells on the right of origin, and 100 on the left</td>
-        <td><a href="https://esolangs.org/wiki/OOo_CODE">https://esolangs.org/wiki/OOo_CODE</a></td>
-      </tr>
-      <tr>
-        <td>PlusIntMinus</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/PlusIntMinus">https://esolangs.org/wiki/PlusIntMinus</a></td>
-      </tr>
-      <tr>
-        <td>PlusOrMinus</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/PlusOrMinus">https://esolangs.org/wiki/PlusOrMinus</a></td>
-      </tr>
-      <tr>
-        <td>pRINT</td>
-        <td>Supports "p" for "print" and "w" for "write"</td>
-        <td><a href="https://esolangs.org/wiki/pRINT">https://esolangs.org/wiki/pRINT</a></td>
-      </tr>
-      <tr>
-        <td>Quine</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/Quine_(programming_language)">https://esolangs.org/wiki/Quine_(programming_language)</a></td>
-      </tr>
-      <tr>
-        <td>Random Brainfuck</td>
-        <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
-        <td><a href="https://esolangs.org/wiki/Random_Brainfuck">https://esolangs.org/wiki/Random_Brainfuck</a></td>
-      </tr>
-      <tr>
-        <td>ReverseFuck</td>
-        <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
-        <td><a href="https://esolangs.org/wiki/ReverseFuck">https://esolangs.org/wiki/ReverseFuck</a></td>
-      </tr>
-      <tr>
-        <td>Self-modifying Brainfuck</td>
-        <td>Supports wraps, EOF results in 0, 1000000 8-bit cells on the right of the program itself, and 100 on the left</td>
-        <td><a href="https://esolangs.org/wiki/Self-modifying_Brainfuck">https://esolangs.org/wiki/Self-modifying_Brainfuck</a></td>
-      </tr>
-      <tr>
-        <td>Self-modifying Brainfuck&#35;</td>
-        <td>Supports wraps, EOF results in 0, 1000000 8-bit cells on the right of the program itself</td>
-        <td><a href="https://esolangs.org/wiki/Self-modifying_Brainfuck_Sharp">https://esolangs.org/wiki/Self-modifying_Brainfuck_Sharp</a></td>
-      </tr>
-      <tr>
-        <td>Text</td>
-        <td></td>
-        <td><a href="https://esolangs.org/wiki/Text">https://esolangs.org/wiki/Text</a></td>
-      </tr>
-      <tr>
-        <td>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</td>
-        <td>Program must start with Start epidemic, but doesn't have to end with Delevop vaccine</td>
-        <td><a href="https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee">https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</a></td>
-      </tr>
-      <tr>
-        <td>Welcome to Esolang, the esoteric programming languages wiki!</td>
-        <td>It's an esoteric language</td>
-        <td><a href="https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!">https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!</a></td>
-      </tr>
-    </tbody>
-  </table>
-</p>
-<hr>
-<a href="index.html">Back to the main page</a>
-</body>
+  <head>
+    <title>About Interpret Esolangs Online</title>
+  </head>
+  <body>
+    <p>
+      Interpret Esolangs Online 2.1.0
+      <br />
+      This is a webpage that interprets esoteric languages in client-side
+      JavaScript. Currently, this supports 32 languages.
+      <br />
+      Here is the detailed information about the languages:
+    </p>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Language Name</th>
+          <th>Information about interpreter</th>
+          <th>Link to esolangs.org</th>
+          <th>Interpreter source code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alphuck</td>
+          <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
+          <td>
+            <a href="https://esolangs.org/wiki/Alphuck"
+              >https://esolangs.org/wiki/Alphuck</a
+            >
+          </td>
+          <td><a href="alphuck.js">alphuck.js</a></td>
+        </tr>
+        <tr>
+          <td>APLWSI</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/APLWSI"
+              >https://esolangs.org/wiki/APLWSI</a
+            >
+          </td>
+          <td><a href="aplwsi.js">aplwsi.js</a></td>
+        </tr>
+        <tr>
+          <td>Arithmetic</td>
+          <td>
+            A slight modification of the interpreter by the esolang user
+            PythonshellDebugwindow in public domain
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/Arithmetic"
+              >https://esolangs.org/wiki/Arithmetic</a
+            >
+          </td>
+          <td><a href="arithmetic.js">arithmetic.js</a></td>
+        </tr>
+        <tr>
+          <td>B2C</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/B2C"
+              >https://esolangs.org/wiki/B2C</a
+            >
+          </td>
+          <td><a href="b2c.js">b2c.js</a></td>
+        </tr>
+        <tr>
+          <td>Befunge-93</td>
+          <td>
+            Unrestricted playfield size, division or modulo by zero results in 0
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/Befunge"
+              >https://esolangs.org/wiki/Befunge</a
+            >
+          </td>
+          <td><a href="befunge.js">befunge.js</a></td>
+        </tr>
+        <tr>
+          <td>Brainfuck+2</td>
+          <td>1000000 cells</td>
+          <td>
+            <a href="https://esolangs.org/wiki/Brainfuck%2B2"
+              >https://esolangs.org/wiki/Brainfuck%2B2</a
+            >
+          </td>
+          <td><a href="bfp2.js">bfp2.js</a></td>
+        </tr>
+        <tr>
+          <td>Brainalpha</td>
+          <td>1000000 cells</td>
+          <td>
+            <a href="https://esolangs.org/wiki/Brainalpha"
+              >https://esolangs.org/wiki/Brainalpha</a
+            >
+          </td>
+          <td><a href="brainalpha.js">brainalpha.js</a></td>
+        </tr>
+        <tr>
+          <td>!!brainfeed</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/!!brainfeed"
+              >https://esolangs.org/wiki/!!brainfeed</a
+            >
+          </td>
+          <td><a href="brainfeed.js">brainfeed.js</a></td>
+        </tr>
+        <tr>
+          <td>brainfuck</td>
+          <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
+          <td>
+            <a href="https://esolangs.org/wiki/Brainfuck"
+              >https://esolangs.org/wiki/Brainfuck</a
+            >
+          </td>
+          <td><a href="brainfuck.js">brainfuck.js</a></td>
+        </tr>
+        <tr>
+          <td>Chicken</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/Chicken"
+              >https://esolangs.org/wiki/Chicken</a
+            >
+          </td>
+          <td><a href="chicken.js">chicken.js</a></td>
+        </tr>
+        <tr>
+          <td>&gt;&lt;x&gt;</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/Dead_fish"
+              >https://esolangs.org/wiki/Dead_fish</a
+            >
+          </td>
+          <td><a href="deadfish.js">deadfish.js</a></td>
+        </tr>
+        <tr>
+          <td>Deadfish</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/Deadfish"
+              >https://esolangs.org/wiki/Deadfish</a
+            >
+          </td>
+          <td><a href="dead_fish.js">dead_fish.js</a></td>
+        </tr>
+        <tr>
+          <td>Hello</td>
+          <td>
+            Case sensitive, outputs "Hello World" and a line feed for every h
+            command
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/Hello"
+              >https://esolangs.org/wiki/Hello</a
+            >
+          </td>
+          <td><a href="hello.js">hello.js</a></td>
+        </tr>
+        <tr>
+          <td>Hello++</td>
+          <td>
+            Case insensitive, outputs "Hello World" and a line feed for every h
+            (or H) command
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/Hello%2B%2B"
+              >https://esolangs.org/wiki/Hello%2B%2B</a
+            >
+          </td>
+          <td><a href="hellopp.js">hellopp.js</a></td>
+        </tr>
+        <tr>
+          <td>HQ9+</td>
+          <td>Doesn't output the accumulator in the + command</td>
+          <td>
+            <a href="https://esolangs.org/wiki/HQ9%2B"
+              >https://esolangs.org/wiki/HQ9%2B</a
+            >
+          </td>
+          <td><a href="hq9p.js">hq9p.js</a></td>
+        </tr>
+        <tr>
+          <td>HWorld</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/HWorld"
+              >https://esolangs.org/wiki/HWorld</a
+            >
+          </td>
+          <td><a href="hworld.js">hworld.js</a></td>
+        </tr>
+        <tr>
+          <td>&lt;stack&gt;</td>
+          <td>
+            Interpreter comes from
+            <a href="https://github.com/none-None1/lstackg/"
+              >https://github.com/none-None1/lstackg/</a
+            >
+            which is in public domain
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/LstackG"
+              >https://esolangs.org/wiki/LstackG</a
+            >
+          </td>
+          <td><a href="lstackg.js">lstackg.js</a></td>
+        </tr>
+        <tr>
+          <td>Nil</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/Nil"
+              >https://esolangs.org/wiki/Nil</a
+            >
+          </td>
+          <td><a href="nil.js">nil.js</a></td>
+        </tr>
+        <tr>
+          <td>No.</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/No%2E"
+              >https://esolangs.org/wiki/No%2E</a
+            >
+          </td>
+          <td><a href="no.js">no.js</a></td>
+        </tr>
+        <tr>
+          <td>Nope.</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/Nope%2E"
+              >https://esolangs.org/wiki/Nope%2E</a
+            >
+          </td>
+          <td><a href="nope.js">nope.js</a></td>
+        </tr>
+        <tr>
+          <td>oOo CODE</td>
+          <td>
+            Supports wraps, EOF results in 0, 1000000 8-bit cells on the right
+            of origin, and 100 on the left
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/OOo_CODE"
+              >https://esolangs.org/wiki/OOo_CODE</a
+            >
+          </td>
+          <td><a href="ooocode.js">ooocode.js</a></td>
+        </tr>
+        <tr>
+          <td>PlusIntMinus</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/PlusIntMinus"
+              >https://esolangs.org/wiki/PlusIntMinus</a
+            >
+          </td>
+          <td><a href="plusintminus.js">plusintminus.js</a></td>
+        </tr>
+        <tr>
+          <td>PlusOrMinus</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/PlusOrMinus"
+              >https://esolangs.org/wiki/PlusOrMinus</a
+            >
+          </td>
+          <td><a href="plusorminus.js">plusorminus.js</a></td>
+        </tr>
+        <tr>
+          <td>pRINT</td>
+          <td>Supports "p" for "print" and "w" for "write"</td>
+          <td>
+            <a href="https://esolangs.org/wiki/pRINT"
+              >https://esolangs.org/wiki/pRINT</a
+            >
+          </td>
+          <td><a href="print.js">print.js</a></td>
+        </tr>
+        <tr>
+          <td>Quine</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/Quine_(programming_language)"
+              >https://esolangs.org/wiki/Quine_(programming_language)</a
+            >
+          </td>
+          <td><a href="quine.js">quine.js</a></td>
+        </tr>
+        <tr>
+          <td>Random Brainfuck</td>
+          <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
+          <td>
+            <a href="https://esolangs.org/wiki/Random_Brainfuck"
+              >https://esolangs.org/wiki/Random_Brainfuck</a
+            >
+          </td>
+          <td><a href="rbf.js">rbf.js</a></td>
+        </tr>
+        <tr>
+          <td>ReverseFuck</td>
+          <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
+          <td>
+            <a href="https://esolangs.org/wiki/ReverseFuck"
+              >https://esolangs.org/wiki/ReverseFuck</a
+            >
+          </td>
+          <td><a href="reversefuck.js">reversefuck.js</a></td>
+        </tr>
+        <tr>
+          <td>Self-modifying Brainfuck</td>
+          <td>
+            Supports wraps, EOF results in 0, 1000000 8-bit cells on the right
+            of the program itself, and 100 on the left
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/Self-modifying_Brainfuck"
+              >https://esolangs.org/wiki/Self-modifying_Brainfuck</a
+            >
+          </td>
+          <td><a href="smbf.js">smbf.js</a></td>
+        </tr>
+        <tr>
+          <td>Self-modifying Brainfuck#</td>
+          <td>
+            Supports wraps, EOF results in 0, 1000000 8-bit cells on the right
+            of the program itself
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/Self-modifying_Brainfuck_Sharp"
+              >https://esolangs.org/wiki/Self-modifying_Brainfuck_Sharp</a
+            >
+          </td>
+          <td><a href="smbf_sharp.js">smbf_sharp.js</a></td>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td></td>
+          <td>
+            <a href="https://esolangs.org/wiki/Text"
+              >https://esolangs.org/wiki/Text</a
+            >
+          </td>
+          <td><a href="text.js">text.js</a></td>
+        </tr>
+        <tr>
+          <td>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</td>
+          <td>
+            Program must start with Start epidemic, but doesn't have to end with
+            Delevop vaccine
+          </td>
+          <td>
+            <a href="https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+              >https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</a
+            >
+          </td>
+          <td><a href="wee.js">wee.js</a></td>
+        </tr>
+        <tr>
+          <td>Welcome to Esolang, the esoteric programming languages wiki!</td>
+          <td>It's an esoteric language</td>
+          <td>
+            <a
+              href="https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!"
+              >https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!</a
+            >
+          </td>
+          <td><a href="wte_teplw.js">wte_teplw.js</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <a href="index.html">Back to the main page</a>
+  </body>
 </html>
