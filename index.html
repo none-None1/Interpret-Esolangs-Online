@@ -1,170 +1,299 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Interpret Esolangs Online</title>
-</head>
-<body>
-<h3>Welcome to Interpret Esolangs Online</h3>
-<p>Interpret Esolangs Online allows you to run programs in various esoteric languages, including brainfuck, deadfish, etc.</p>
-<script defer src="alphuck.js"></script>
-<script defer src="aplwsi.js"></script>
-<script defer src="arithmetic.js"></script>
-<script defer src="b2c.js"></script>
-<script defer src="befunge.js"></script>
-<script defer src="bfp2.js"></script>
-<script defer src="brainalpha.js"></script>
-<script defer src="brainfeed.js"></script>
-<script defer src="brainfuck.js"></script>
-<script defer src="chicken.js"></script>
-<script defer src="dead_fish.js"></script>
-<script defer src="deadfish.js"></script>
-<script defer src="hello.js"></script>
-<script defer src="hellopp.js"></script>
-<script defer src="hq9p.js"></script>
-<script defer src="hworld.js"></script>
-<script defer src="lstackg.js"></script>
-<script defer src="nil.js"></script>
-<script defer src="no.js"></script>
-<script defer src="nope.js"></script>
-<script defer src="ooocode.js"></script>
-<script defer src="plusintminus.js"></script>
-<script defer src="plusorminus.js"></script>
-<script defer src="print.js"></script>
-<script defer src="quine.js"></script>
-<script defer src="rbf.js"></script>
-<script defer src="reversefuck.js"></script>
-<script defer src="smbf.js"></script>
-<script defer src="smbf_sharp.js"></script>
-<script defer src="text.js"></script>
-<script defer src="wee.js"></script>
-<script defer src="wte_teplw.js"></script>
-<select id="lang">
-    <option>Alphuck</option>
-    <option>APLWSI</option>
-    <option>Arithmetic</option>
-    <option>B2C</option>
-    <option>Befunge-93</option>
-    <option>Brainfuck+2</option>
-    <option>Brainalpha</option>
-    <option>!!brainfeed</option>
-    <option>brainfuck</option>
-    <option>Chicken</option>
-    <option>&gt;&lt;x&gt;</option>
-    <option>Deadfish</option>
-    <option>Hello</option>
-    <option>Hello++</option>
-    <option>HQ9+</option>
-    <option>HWorld</option>
-    <option>&lt;stack&gt;</option>
-    <option>Nil</option>
-    <option>No.</option>
-    <option>Nope.</option>
-    <option>oOo CODE</option>
-    <option>PlusIntMinus</option>
-    <option>PlusOrMinus</option>
-    <option>pRINT</option>
-    <option>Quine</option>
-    <option>Random Brainfuck</option>
-    <option>ReverseFuck</option>
-    <option>Self-modifying Brainfuck</option>
-    <option>Self-modifying Brainfuck&#35;</option>
-    <option>Text</option>
-    <option>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>
-    <option>Welcome to Esolang, the esoteric programming languages wiki!</option>
-</select>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-    window.run=function(){
-        var funcs={'Alphuck': alphuck, 'APLWSI': aplwsi, 'Arithmetic': arithmetic, 'B2C': b2c, 'Befunge-93': befunge, 'Brainfuck+2': bfp2, 'Brainalpha': brainalpha, '!!brainfeed':brainfeed, 'brainfuck': brainfuck, 'Chicken': chicken, '><x>': dead_fish, 'Deadfish': deadfish, 'Hello': hello, 'Hello++': hellopp, 'HQ9+': hq9p, 'HWorld': hworld, '<stack>': lstackg, 'Nil': nil, 'No.': no, 'Nope.': nope, 'oOo CODE': ooocode, 'PlusIntMinus': plusintminus, 'PlusOrMinus': plusorminus, 'pRINT': print, 'Quine': quine, 'Random Brainfuck': rbf, 'ReverseFuck': reversefuck, 'Self-modifying Brainfuck': smbf, 'Self-modifying Brainfuck#': smbf_sharp, 'Text': text, 'Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee': wee, 'Welcome to Esolang, the esoteric programming languages wiki!': wte_teplw};
-        var langname=document.getElementById('lang').value;
-        var func=funcs[langname];
-        var code=document.getElementById('program').value;
-        var input=document.getElementById('input').value;
-        document.getElementById('log').value='';
-        const s = new Date().getTime();
-        var erroc=false;
-        try{
-            var output=func(code,input);
-        }catch(err){
-            document.getElementById('log').value=err.message+'\n';
-            erroc=true;
-        }
-        const e = new Date().getTime();
-        if(erroc){
-            document.getElementById('log').value=document.getElementById('log').value+`Program terminates in ${e-s} ms and raises an error.`;
-        }else{
-            document.getElementById('log').value=document.getElementById('log').value+`Program terminates in ${e-s} ms successfully.`;
-            document.getElementById('output').value=output;
-        }
-    }
-    window.upload=function(){
-        var ev=(window.event||event);
-        var file=ev.target.files[0];
-        var reader=new FileReader();
-        reader.onload = function(){
-            document.getElementById("program").value=reader.result;
-        }
-        reader.readAsText(file);
-    }
-    window.store=function(){
-        var link=document.createElement('a');
-        link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.getElementById('program').value));
-        link.setAttribute('download','program-'+Math.floor(Math.random()*1000000000)+'.txt');
-        link.click();
-    }
-    window.create_link=function(){
-        var prog=encodeURIComponent(document.getElementById('program').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-        var input=encodeURIComponent(document.getElementById('input').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-        var lang=encodeURIComponent(document.getElementById('lang').value).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-        var urlname=window.location.href.split('#')[0]+'#'+btoa(lang+'\x00'+prog+'\x00'+input);
-        var encoded=btoa(urlname).replaceAll('=','_').replaceAll('+','@').replaceAll('/','$');
-        var link=document.createElement('a');
-        link.setAttribute('href','link.html#'+encoded);
-        link.setAttribute('target','_blank');
-        link.click();
-    }
-    if(!window.location.hash){ // old permalink encoding method
-        var args=new URLSearchParams(window.location.search);
-        var flag=0;
-        if(args.has('lang')){
-            document.getElementById('lang').value=atob(args.get('lang').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
-            flag=1;
-        }
-        if(args.has('code')){
-            document.getElementById('program').value=atob(args.get('code').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
-            flag=1;
-        }
-        if(args.has('input')){
-            document.getElementById('input').value=atob(args.get('input').replaceAll('_','=').replaceAll('@','+').replaceAll('$','/'));
-            flag=1;
-        }
-        if(flag){
+  </head>
+  <body>
+    <h3>Welcome to Interpret Esolangs Online</h3>
+    <p>
+      Interpret Esolangs Online allows you to run programs in various esoteric
+      languages, including brainfuck, deadfish, etc.
+    </p>
+    <script defer src="alphuck.js"></script>
+    <script defer src="aplwsi.js"></script>
+    <script defer src="arithmetic.js"></script>
+    <script defer src="b2c.js"></script>
+    <script defer src="befunge.js"></script>
+    <script defer src="bfp2.js"></script>
+    <script defer src="brainalpha.js"></script>
+    <script defer src="brainfeed.js"></script>
+    <script defer src="brainfuck.js"></script>
+    <script defer src="chicken.js"></script>
+    <script defer src="dead_fish.js"></script>
+    <script defer src="deadfish.js"></script>
+    <script defer src="hello.js"></script>
+    <script defer src="hellopp.js"></script>
+    <script defer src="hq9p.js"></script>
+    <script defer src="hworld.js"></script>
+    <script defer src="lstackg.js"></script>
+    <script defer src="nil.js"></script>
+    <script defer src="no.js"></script>
+    <script defer src="nope.js"></script>
+    <script defer src="ooocode.js"></script>
+    <script defer src="plusintminus.js"></script>
+    <script defer src="plusorminus.js"></script>
+    <script defer src="plusintoutput.js"></script>
+    <script defer src="plusoroutput.js"></script>
+    <script defer src="print.js"></script>
+    <script defer src="quine.js"></script>
+    <script defer src="rbf.js"></script>
+    <script defer src="reversefuck.js"></script>
+    <script defer src="smbf.js"></script>
+    <script defer src="smbf_sharp.js"></script>
+    <script defer src="text.js"></script>
+    <script defer src="wee.js"></script>
+    <script defer src="wte_teplw.js"></script>
+    <select id="lang">
+      <option>Alphuck</option>
+      <option>APLWSI</option>
+      <option>Arithmetic</option>
+      <option>B2C</option>
+      <option>Befunge-93</option>
+      <option>Brainfuck+2</option>
+      <option>Brainalpha</option>
+      <option>!!brainfeed</option>
+      <option>brainfuck</option>
+      <option>Chicken</option>
+      <option>&gt;&lt;x&gt;</option>
+      <option>Deadfish</option>
+      <option>Hello</option>
+      <option>Hello++</option>
+      <option>HQ9+</option>
+      <option>HWorld</option>
+      <option>&lt;stack&gt;</option>
+      <option>Nil</option>
+      <option>No.</option>
+      <option>Nope.</option>
+      <option>oOo CODE</option>
+      <option>PlusIntMinus</option>
+      <option>PlusIntOutput</option>
+      <option>PlusOrMinus</option>
+      <option>PlusOrOutput</option>
+      <option>pRINT</option>
+      <option>Quine</option>
+      <option>Random Brainfuck</option>
+      <option>ReverseFuck</option>
+      <option>Self-modifying Brainfuck</option>
+      <option>Self-modifying Brainfuck&#35;</option>
+      <option>Text</option>
+      <option>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>
+      <option>
+        Welcome to Esolang, the esoteric programming languages wiki!
+      </option>
+    </select>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.run = function () {
+          var funcs = {};
+          var langname = document.getElementById("lang").value;
+          var code = document.getElementById("program").value;
+          var input = document.getElementById("input").value;
+          funcs["Alphuck"] = alphuck;
+          funcs["APLWSI"] = aplwsi;
+          funcs["Arithmetic"] = arithmetic;
+          funcs["B2C"] = b2c;
+          funcs["Befunge-93"] = befunge;
+          funcs["Brainfuck+2"] = bfp2;
+          funcs["Brainalpha"] = brainalpha;
+          funcs["!!brainfeed"] = brainfeed;
+          funcs["brainfuck"] = brainfuck;
+          funcs["Chicken"] = chicken;
+          funcs["><x>"] = dead_fish;
+          funcs["Deadfish"] = deadfish;
+          funcs["Hello"] = hello;
+          funcs["Hello++"] = hellopp;
+          funcs["HQ9+"] = hq9p;
+          funcs["HWorld"] = hworld;
+          funcs["<stack>"] = lstackg;
+          funcs["Nil"] = nil;
+          funcs["No."] = no;
+          funcs["Nope."] = nope;
+          funcs["oOo CODE"] = ooocode;
+          funcs["PlusIntMinus"] = plusintminus;
+          funcs["PlusIntOutput"] = plusintoutput;
+          funcs["PlusOrMinus"] = plusorminus;
+          funcs["PlusOrOutput"] = plusoroutput;
+          funcs["pRINT"] = print;
+          funcs["Quine"] = quine;
+          funcs["Random Brainfuck"] = rbf;
+          funcs["ReverseFuck"] = reversefuck;
+          funcs["Self-modifying Brainfuck"] = smbf;
+          funcs["Self-modifying Brainfuck#"] = smbf_sharp;
+          funcs["Text"] = text;
+          funcs["Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee"] = wee;
+          funcs[
+            "Welcome to Esolang, the esoteric programming languages wiki!"
+          ] = wte_teplw;
+          var func = funcs[langname];
+          document.getElementById("log").value = "";
+          const s = new Date().getTime();
+          var erroc = false;
+          try {
+            var output = func(code, input);
+          } catch (err) {
+            document.getElementById("log").value = err.message + "\n";
+            erroc = true;
+          }
+          const e = new Date().getTime();
+          if (erroc) {
+            document.getElementById("log").value =
+              document.getElementById("log").value +
+              `Program terminates in ${e - s} ms and raises an error.`;
+          } else {
+            document.getElementById("log").value =
+              document.getElementById("log").value +
+              `Program terminates in ${e - s} ms successfully.`;
+            document.getElementById("output").value = output;
+          }
+        };
+        window.upload = function () {
+          var ev = window.event || event;
+          var file = ev.target.files[0];
+          var reader = new FileReader();
+          reader.onload = function () {
+            document.getElementById("program").value = reader.result;
+          };
+          reader.readAsText(file);
+        };
+        window.store = function () {
+          var link = document.createElement("a");
+          link.setAttribute(
+            "href",
+            "data:text/plain;charset=utf-8," +
+              encodeURIComponent(document.getElementById("program").value)
+          );
+          link.setAttribute(
+            "download",
+            "program-" + Math.floor(Math.random() * 1000000000) + ".txt"
+          );
+          link.click();
+        };
+        window.create_link = function () {
+          var prog = encodeURIComponent(
+            document.getElementById("program").value
+          )
+            .replaceAll("=", "_")
+            .replaceAll("+", "@")
+            .replaceAll("/", "$");
+          var input = encodeURIComponent(document.getElementById("input").value)
+            .replaceAll("=", "_")
+            .replaceAll("+", "@")
+            .replaceAll("/", "$");
+          var lang = encodeURIComponent(document.getElementById("lang").value)
+            .replaceAll("=", "_")
+            .replaceAll("+", "@")
+            .replaceAll("/", "$");
+          var urlname =
+            window.location.href.split("#")[0] +
+            "#" +
+            btoa(lang + "\x00" + prog + "\x00" + input);
+          var encoded = btoa(urlname)
+            .replaceAll("=", "_")
+            .replaceAll("+", "@")
+            .replaceAll("/", "$");
+          var link = document.createElement("a");
+          link.setAttribute("href", "link.html#" + encoded);
+          link.setAttribute("target", "_blank");
+          link.click();
+        };
+        if (!window.location.hash) {
+          // old permalink encoding method
+          var args = new URLSearchParams(window.location.search);
+          var flag = 0;
+          if (args.has("lang")) {
+            document.getElementById("lang").value = atob(
+              args
+                .get("lang")
+                .replaceAll("_", "=")
+                .replaceAll("@", "+")
+                .replaceAll("$", "/")
+            );
+            flag = 1;
+          }
+          if (args.has("code")) {
+            document.getElementById("program").value = atob(
+              args
+                .get("code")
+                .replaceAll("_", "=")
+                .replaceAll("@", "+")
+                .replaceAll("$", "/")
+            );
+            flag = 1;
+          }
+          if (args.has("input")) {
+            document.getElementById("input").value = atob(
+              args
+                .get("input")
+                .replaceAll("_", "=")
+                .replaceAll("@", "+")
+                .replaceAll("$", "/")
+            );
+            flag = 1;
+          }
+          if (flag) {
             run();
-        }
-    }else{
-        if(window.location.hash.slice(1)){
-            var debase64=atob(window.location.hash.slice(1).replaceAll('_','/').replaceAll('-','+')).split('\x00');
-            document.getElementById('lang').value=decodeURIComponent(debase64[0]);
-            document.getElementById('program').value=decodeURIComponent(debase64[1]);
-            document.getElementById('input').value=decodeURIComponent(debase64[2]);
+          }
+        } else {
+          if (window.location.hash.slice(1)) {
+            var debase64 = atob(
+              window.location.hash
+                .slice(1)
+                .replaceAll("_", "/")
+                .replaceAll("-", "+")
+            ).split("\x00");
+            document.getElementById("lang").value = decodeURIComponent(
+              debase64[0]
+            );
+            document.getElementById("program").value = decodeURIComponent(
+              debase64[1]
+            );
+            document.getElementById("input").value = decodeURIComponent(
+              debase64[2]
+            );
             run();
+          }
         }
-    }
-});
-</script>
-<br>
-<textarea id="program" cols=80 rows=20 placeholder="code"></textarea>
-<textarea id="input" cols=80 rows=20 placeholder="input"></textarea>
-<textarea id="output" cols=80 rows=20 readonly placeholder="output"></textarea>
-<textarea id="log" cols=80 rows=20 readonly placeholder="log"></textarea>
-<br>
-<button onclick="run()" title="Executes the program">Run</button>
-<button onclick="create_link()" title="Creates a permanent link that can later be used to execute the same program">Create permanent link</button>
-<button onclick="store()" title="Download the program as a text file">Download code as text file</button>
-<input type="file" onchange="upload()" title="Upload a local file to the webpage"></input>
-<br>
-<a href="https://github.com/none-None1/Interpret-Esolangs-Online">The source code</a> of this webpage.
-<hr>
-<a href="about.html">About</a>
-</body>
+      });
+    </script>
+    <br />
+    <textarea id="program" cols="80" rows="20" placeholder="code"></textarea>
+    <textarea id="input" cols="80" rows="20" placeholder="input"></textarea>
+    <textarea
+      id="output"
+      cols="80"
+      rows="20"
+      readonly
+      placeholder="output"
+    ></textarea>
+    <textarea
+      id="log"
+      cols="80"
+      rows="20"
+      readonly
+      placeholder="log"
+    ></textarea>
+    <br />
+    <button onclick="run()" title="Executes the program">Run</button>
+    <button
+      onclick="create_link()"
+      title="Creates a permanent link that can later be used to execute the same program"
+    >
+      Create permanent link
+    </button>
+    <button onclick="store()" title="Download the program as a text file">
+      Download code as text file
+    </button>
+    <input
+      type="file"
+      onchange="upload()"
+      title="Upload a local file to the webpage"
+    />
+    <br />
+    <a href="https://github.com/none-None1/Interpret-Esolangs-Online"
+      >The source code</a
+    >
+    of this webpage.
+    <hr />
+    <a href="about.html">About</a>
+  </body>
 </html>
