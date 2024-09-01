@@ -3,7 +3,7 @@ function plusoroutput(program){
     for(let i of program){
         if(i=='+'){
             x++;if(x==256){x=0}
-        }else if(i=='-'){
+        }else if(i=='。'){
             output+=String.fromCharCode(x);
         }
     }
