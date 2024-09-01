@@ -1,4 +1,4 @@
-function plusintoutput(program){
+function plusintoutput(program,input){
     var x=0,output='';
     while(program.length){
         if(program[0]=='+'){

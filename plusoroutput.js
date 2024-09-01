@@ -1,4 +1,4 @@
-function plusoroutput(program){
+function plusoroutput(program,input){
     var output='',x=0;
     for(let i of program){
         if(i=='+'){
