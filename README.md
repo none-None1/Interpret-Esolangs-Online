@@ -34,6 +34,8 @@ It currently supports the following:
 * [Text](https://esolangs.org/wiki/Text)
 * [Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee](https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee)
 * [Welcome to Esolang, the esoteric programming languages wiki!](https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!)
+* [Wizzcake](https://esolangs.org/wiki/Wizzcake)
+* [Wizzcake+](https://esolangs.org/wiki/Wizzcake%2B)
 
 ### How to use?
 Just click the run button!

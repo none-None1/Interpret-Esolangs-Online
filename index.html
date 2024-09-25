@@ -43,6 +43,8 @@
     <script defer src="text.js"></script>
     <script defer src="wee.js"></script>
     <script defer src="wte_teplw.js"></script>
+    <script defer src="wizzcake.js"></script>
+    <script defer src="wizzcakep.js"></script>
     <select id="lang">
       <option>Alphuck</option>
       <option>APLWSI</option>
@@ -80,6 +82,8 @@
       <option>
         Welcome to Esolang, the esoteric programming languages wiki!
       </option>
+      <option>Wizzcake</option>
+      <option>Wizzcake+</option>
     </select>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -124,6 +128,8 @@
           funcs[
             "Welcome to Esolang, the esoteric programming languages wiki!"
           ] = wte_teplw;
+          funcs["Wizzcake"] = wizzcake;
+          funcs["Wizzcake+"] = wizzcakep;
           var func = funcs[langname];
           document.getElementById("log").value = "";
           const s = new Date().getTime();
