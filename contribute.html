@@ -5,5 +5,36 @@
     </head>
     <body>
        <h1>Contribution Guide</h1> 
+       <p>
+        Contribution to this website is welcomed. However, please read this guide before you contribute.
+        <h2>One Unbreakable Rule</h2>
+        <b>Any contribution to this website must be <a href="http://creativecommons.org/publicdomain/zero/1.0/">EXPLICITLY PUBLIC DOMAIN</a> (e.g.: Explicitly licensed with Unlicense or CC0-1.0), stuff that do not have license are copyrighted by default and is not allowed.</b>
+        <h2>How You Can Contribute</h2>
+        <h3>I found a bug</h3>
+        Post an issue at <a href="https://github.com/none-None1/Interpret-Esolangs-Online">GitHub</a> or talk in the <a href="https://esolangs.org/wiki/Talk:Interpret_Esolangs_Online">talk page at esolangs.org</a>. You can send a pull request if you already know how to fix the bug.
+        <h3>I want a new esolang/feature</h3>
+        It's like the above but you can give me a <b>public domain</b> interpreter (preferably client-side JS) as well. If you want to send a pull request to add an esolang, here is how to do that:
+        <li>Add a JavaScript file for the language, it contains a function that takes the program and the input and returns the output, like this:</li>
+        <pre>
+            function yourlang(program,input){
+                //code here...
+                return output;
+            }
+        </pre>
+        If the interpreter is in other languages but can be called from JavaScript (like C by using Emscripten), the JavaScript file should call the interpreter.
+
+        The function name should not be the same with function names for existing esolangs.
+        <li>Add an <code>option</code> tag inside the <code>select</code> tag in the index.html file, the text should be the language name, like this:</li>
+        <pre>
+            &lt;option&gt;YourLang&lt;/option&gt;
+        </pre>
+        The <code>option</code> tags should then be sorted by text, lexicographically.
+        <li>Add a <code>script</code> tag in the index.html file, the source is the JavaScript file you created in the first step, like this:</li>
+        <pre>
+            &lt;script defer src=&quot;yourlang.js&quot;&gt;&lt;/script&gt;
+        </pre>
+        <code>script</code> tags should be sorted by their sources, in lexicographical order, just like the <code>option</code> tags.
+        <li>Finally, add the link to the language in the README.md file and add a row for this language in the about.html file, and update the number of languages and the version number.</li>
+       </p>
     </body>
 </html>
