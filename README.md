@@ -17,6 +17,7 @@ It currently supports the following:
 * [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
 * [HWorld](https://esolangs.org/wiki/HWorld)
+* [Kipple](https://esolangs.org/wiki/Kipple)
 * [&lt;stack&gt;](https://esolangs.org/wiki/LstackG)
 * [Nil](https://esolangs.org/wiki/Nil)
 * [No.](https://esolangs.org/wiki/No%2E)
