@@ -1,1 +1,3 @@
-function six(program,input){return 6;}
+function Six(program,input){
+  return 6;
+}
