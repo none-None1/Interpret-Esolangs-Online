@@ -9,6 +9,7 @@
       Interpret Esolangs Online allows you to run programs in various esoteric
       languages, including brainfuck, deadfish, etc.
     </p>
+    <script defer src="6.js"></script>
     <script defer src="alphuck.js"></script>
     <script defer src="aplwsi.js"></script>
     <script defer src="arithmetic.js"></script>
@@ -47,6 +48,7 @@
     <script defer src="wizzcake.js"></script>
     <script defer src="wizzcakep.js"></script>
     <select id="lang">
+      <option>6</option>
       <option>Alphuck</option>
       <option>APLWSI</option>
       <option>Arithmetic</option>
@@ -94,6 +96,7 @@
           var langname = document.getElementById("lang").value;
           var code = document.getElementById("program").value;
           var input = document.getElementById("input").value;
+          funcs["6"] = six;
           funcs["Alphuck"] = alphuck;
           funcs["APLWSI"] = aplwsi;
           funcs["Arithmetic"] = arithmetic;
