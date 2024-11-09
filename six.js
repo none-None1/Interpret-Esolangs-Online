@@ -1,1 +1,1 @@
-function six(program){return 6;}
+function six(program,input){return 6;}
