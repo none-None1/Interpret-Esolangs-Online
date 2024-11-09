@@ -5,7 +5,6 @@
   </head>
   <body>
     <h3>Welcome to IEO-fork. It's basically a fork of Interpret Esolangs Online</h3>
-    <script defer src="six.js"></script>
     <script defer src="alphuck.js"></script>
     <script defer src="aplwsi.js"></script>
     <script defer src="arithmetic.js"></script>
@@ -38,6 +37,7 @@
     <script defer src="reversefuck.js"></script>
     <script defer src="smbf.js"></script>
     <script defer src="smbf_sharp.js"></script>
+    <script defer src="six.js"></script>
     <script defer src="text.js"></script>
     <script defer src="wee.js"></script>
     <script defer src="wte_teplw.js"></script>
@@ -92,7 +92,7 @@
           var langname = document.getElementById("lang").value;
           var code = document.getElementById("program").value;
           var input = document.getElementById("input").value;
-          funcs["6"] = six;
+          funcs["six"] = six;
           funcs["Alphuck"] = alphuck;
           funcs["APLWSI"] = aplwsi;
           funcs["Arithmetic"] = arithmetic;
