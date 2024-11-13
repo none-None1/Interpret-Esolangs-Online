@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Interpret Esolangs Online</title>
+    <title>IEO-fork</title>
   </head>
   <body>
-    <h3>Welcome to Interpret Esolangs Online</h3>
-    <p>
-      Interpret Esolangs Online allows you to run programs in various esoteric
-      languages, including brainfuck, deadfish, etc.
-    </p>
+    <h3>Welcome to IEO-fork. It's basically a fork of Interpret Esolangs Online</h3>
+    <script defer src="galax.js"></script>
     <script defer src="alphuck.js"></script>
     <script defer src="aplwsi.js"></script>
     <script defer src="arithmetic.js"></script>
@@ -41,12 +38,14 @@
     <script defer src="reversefuck.js"></script>
     <script defer src="smbf.js"></script>
     <script defer src="smbf_sharp.js"></script>
+    <script defer src="six.js"></script>
     <script defer src="text.js"></script>
     <script defer src="wee.js"></script>
     <script defer src="wte_teplw.js"></script>
     <script defer src="wizzcake.js"></script>
     <script defer src="wizzcakep.js"></script>
     <select id="lang">
+      <option>>*&<<&^</output>
       <option>Alphuck</option>
       <option>APLWSI</option>
       <option>Arithmetic</option>
@@ -79,6 +78,7 @@
       <option>ReverseFuck</option>
       <option>Self-modifying Brainfuck</option>
       <option>Self-modifying Brainfuck&#35;</option>
+      <option>Six</option>
       <option>Text</option>
       <option>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>
       <option>
@@ -94,6 +94,7 @@
           var langname = document.getElementById("lang").value;
           var code = document.getElementById("program").value;
           var input = document.getElementById("input").value;
+          funcs[">*&<<&^"] = galax;
           funcs["Alphuck"] = alphuck;
           funcs["APLWSI"] = aplwsi;
           funcs["Arithmetic"] = arithmetic;
@@ -126,11 +127,10 @@
           funcs["ReverseFuck"] = reversefuck;
           funcs["Self-modifying Brainfuck"] = smbf;
           funcs["Self-modifying Brainfuck#"] = smbf_sharp;
+          funcs["Six"] = Six;
           funcs["Text"] = text;
           funcs["Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee"] = wee;
-          funcs[
-            "Welcome to Esolang, the esoteric programming languages wiki!"
-          ] = wte_teplw;
+          funcs["Welcome to Esolang, the esoteric programming languages wiki!"] = wte_teplw;
           funcs["Wizzcake"] = wizzcake;
           funcs["Wizzcake+"] = wizzcakep;
           var func = funcs[langname];
@@ -139,6 +139,7 @@
           var erroc = false;
           try {
             var output = func(code, input);
+            if (output.length==4096){throw new Error('The program exited 4096 bytes:','\n',output)};
           } catch (err) {
             document.getElementById("log").value = err.message + "\n";
             erroc = true;
@@ -298,12 +299,11 @@
       title="Upload a local file to the webpage"
     />
     <br />
-    <a href="https://github.com/none-None1/Interpret-Esolangs-Online"
-      >The source code</a
-    >
-    of this webpage.
+    <a href="https://github.com/none-None1/Interpret-Esolangs-Online">Source code</a>
+    of the original repo, <a href="https://github.com/Thevitebsk/IEO-fork">Source code</a>
+    of this repo.
     <br>
-    <a href="contribute.html">Contribution Guide</a>
+    <a href="https://none-none1.github.io/Interpret-Esolangs-Online/contribute.html">Contribution Guide</a> from the original repo
     <hr />
     <a href="about.html">About</a>
   </body>
