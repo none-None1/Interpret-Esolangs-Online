@@ -36,6 +36,7 @@
     <script defer src="plusorminus.js"></script>
     <script defer src="plusintoutput.js"></script>
     <script defer src="plusoroutput.js"></script>
+    <script defer src="poetic.js"></script>
     <script defer src="print.js"></script>
     <script defer src="quine.js"></script>
     <script defer src="rbf.js"></script>
@@ -77,6 +78,7 @@
       <option>PlusIntOutput</option>
       <option>PlusOrMinus</option>
       <option>PlusOrOutput</option>
+      <option>Poetic</option>
       <option>pRINT</option>
       <option>Quine</option>
       <option>Random Brainfuck</option>
@@ -98,7 +100,7 @@
           var langname = document.getElementById("lang").value;
           var code = document.getElementById("program").value;
           var input = document.getElementById("input").value;
-          funcs["›*&«&^"] = galax;
+          funcs["\u203a*&\u00ab&^"] = galax;
           funcs["6"] = six;
           funcs["Alphuck"] = alphuck;
           funcs["APLWSI"] = aplwsi;
@@ -126,6 +128,7 @@
           funcs["PlusIntOutput"] = plusintoutput;
           funcs["PlusOrMinus"] = plusorminus;
           funcs["PlusOrOutput"] = plusoroutput;
+          funcs["Poetic"] = poetic;
           funcs["pRINT"] = print;
           funcs["Quine"] = quine;
           funcs["Random Brainfuck"] = rbf;

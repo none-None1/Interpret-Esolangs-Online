@@ -28,6 +28,7 @@ It currently supports the following:
 * [PlusIntOutput](https://esolangs.org/wiki/PlusIntOutput)
 * [PlusOrMinus](https://esolangs.org/wiki/PlusOrMinus)
 * [PlusOrOutput](https://esolangs.org/wiki/PlusOrOutput)
+* [Poetic](https://esolangs.org/wiki/Poetic)
 * [Quine.](https://esolangs.org/wiki/Quine_(programming_language))
 * [Random Brainfuck](https://esolangs.org/wiki/Random_Brainfuck)
 * [ReverseFuck](https://esolangs.org/wiki/ReverseFuck)
