@@ -4,11 +4,19 @@
     <title>Interpret Esolangs Online</title>
   </head>
   <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href_="https://pyscript.net/releases/2025.5.1/core.css" id="pyscss">
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src_="https://pyscript.net/releases/2025.5.1/core.js" id="pysjs"></script>
     <h3>Welcome to Interpret Esolangs Online</h3>
     <p>
       Interpret Esolangs Online allows you to run programs in various esoteric
       languages, including brainfuck, deadfish, etc.
     </p>
+    <script defer src="pyexec.js"></script>
+    <script defer src="abcdxyz.js"></script>
     <script defer src="alphuck.js"></script>
     <script defer src="aplwsi.js"></script>
     <script defer src="arithmetic.js"></script>
@@ -49,8 +57,11 @@
     <script defer src="wte_teplw.js"></script>
     <script defer src="wizzcake.js"></script>
     <script defer src="wizzcakep.js"></script>
+    <code id="pysout" style="display:none"></code>
+    <code id="pyserr" style="display:none"></code>
     <select id="lang">
       <option>6</option>
+      <option>ABCDXYZ</option>
       <option>Alphuck</option>
       <option>APLWSI</option>
       <option>Arithmetic</option>
@@ -102,6 +113,7 @@
           var input = document.getElementById("input").value;
           funcs["\u203a*&\u00ab&^"] = galax;
           funcs["6"] = six;
+          funcs["ABCDXYZ"] = abcdxyz;
           funcs["Alphuck"] = alphuck;
           funcs["APLWSI"] = aplwsi;
           funcs["Arithmetic"] = arithmetic;
@@ -145,23 +157,26 @@
           var func = funcs[langname];
           document.getElementById("log").value = "";
           const s = new Date().getTime();
-          var erroc = false;
+          var erroc = false,f=false;
           try {
             var output = func(code, input);
+            if(output===undefined)f=true;
           } catch (err) {
             document.getElementById("log").value = err.message + "\n";
             erroc = true;
           }
           const e = new Date().getTime();
-          if (erroc) {
-            document.getElementById("log").value =
-              document.getElementById("log").value +
-              `Program terminates in ${e - s} ms and raises an error.`;
-          } else {
-            document.getElementById("log").value =
-              document.getElementById("log").value +
-              `Program terminates in ${e - s} ms successfully.`;
-            document.getElementById("output").value = output;
+          if(!f){
+            if (erroc) {
+              document.getElementById("log").value =
+                document.getElementById("log").value +
+                `Program terminates in ${e - s} ms and raises an error.`;
+            } else {
+              document.getElementById("log").value =
+                document.getElementById("log").value +
+                `Program terminates in ${e - s} ms successfully.`;
+              document.getElementById("output").value = output;
+            }
           }
         };
         window.upload = function () {

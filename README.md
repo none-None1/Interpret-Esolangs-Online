@@ -2,6 +2,7 @@ Interpret Esolangs Online is a webpage that can execute esoteric languages onlin
 
 It currently supports the following:
 * [6](https://esolangs.org/wiki/6)
+* [ABCDXYZ](https://esolangs.org/wiki/ABCDXYZ)
 * [Alphuck](https://esolangs.org/wiki/Alphuck)
 * [APLWSI](https://esolangs.org/wiki/APLWSI)
 * [Arithmetic](https://esolangs.org/wiki/Arithmetic)
@@ -44,3 +45,6 @@ It currently supports the following:
 Just click the run button!
 
 You can also generate permanent links of programs. However, it you want to do that, <s>your program should **not** be too long.</s> URL length limit no longer exists!
+
+### Interpreters
+Interpret Esolangs Online uses client-side JS to implement interpreters, but a new feature has been added in June 2025 to support the execution of Python code in client-side JS (thanks to [PyScript](https://pyscript.net)).
