@@ -24,6 +24,8 @@
         If the interpreter is in other languages but can be called from JavaScript (like C by using Emscripten), the JavaScript file should call the interpreter.
 
         The function name should not be the same with function names for existing esolangs.
+
+        If you have a Python interpreter, add a Python file to link in the about.html file in the last step, and add a JavaScript file that calls the Python code (not the Python file) just like pyexec_example.html.
         <li>Add an <code>option</code> tag inside the <code>select</code> tag in the index.html file, the text should be the language name, like this:</li>
         <pre>
             &lt;option&gt;YourLang&lt;/option&gt;
@@ -34,6 +36,11 @@
             &lt;script defer src=&quot;yourlang.js&quot;&gt;&lt;/script&gt;
         </pre>
         <code>script</code> tags should be sorted by their sources, in lexicographical order, just like the <code>option</code> tags.
+        <li></li>In the <code>run</code> function, add a line of code that maps the option of the new esolang to the function, like this:</li>
+        <pre>
+            funcs["YourLang"]=yourlang;
+        </pre>
+
         <li>Finally, add the link to the language in the README.md file and add a row for this language in the about.html file, and update the number of languages and the version number.</li>
         Please do <b>NOT</b> do anything else or you'll mess up the repository!
        </p>
