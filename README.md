@@ -1,3 +1,7 @@
+Python 3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> k=open('README.md',encoding='utf-8').read()
+>>> print(k)
 Interpret Esolangs Online is a webpage that can execute esoteric languages online.
 
 It currently supports the following:
@@ -13,8 +17,9 @@ It currently supports the following:
 * [!!brainfeed](https://esolangs.org/wiki/!!brainfeed)
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
 * [Chicken](https://esolangs.org/wiki/Chicken)
-* [&gt;&lt;x&gt;](https://esolangs.org/wiki/Dead_fish)
+* [&gt;&lt;x&gt;](https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E)
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
+* [›*&«&^](https://esolangs.org/wiki/
 * [Hello](https://esolangs.org/wiki/Hello)
 * [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
@@ -29,12 +34,14 @@ It currently supports the following:
 * [PlusIntOutput](https://esolangs.org/wiki/PlusIntOutput)
 * [PlusOrMinus](https://esolangs.org/wiki/PlusOrMinus)
 * [PlusOrOutput](https://esolangs.org/wiki/PlusOrOutput)
+* [pRINT](https://esolangs.org/wiki/pRINT)
 * [Poetic](https://esolangs.org/wiki/Poetic)
-* [Quine.](https://esolangs.org/wiki/Quine_(programming_language))
+* [Quine](https://esolangs.org/wiki/Quine_(programming_language))
 * [Random Brainfuck](https://esolangs.org/wiki/Random_Brainfuck)
 * [ReverseFuck](https://esolangs.org/wiki/ReverseFuck)
 * [Self-modifying Brainfuck](https://esolangs.org/wiki/Self-modifying_Brainfuck)
 * [Self-modifying Brainfuck#](https://esolangs.org/wiki/Self-modifying_Brainfuck_Sharp)
+* [SLet](https://esolangs.org/wiki/SLet)
 * [Text](https://esolangs.org/wiki/Text)
 * [Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee](https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee)
 * [Welcome to Esolang, the esoteric programming languages wiki!](https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!)

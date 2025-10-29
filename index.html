@@ -15,7 +15,9 @@
       Interpret Esolangs Online allows you to run programs in various esoteric
       languages, including brainfuck, deadfish, etc.
     </p>
+    <!-- Script for python execution -->
     <script defer src="pyexec.js"></script>
+    <!-- Script for esolangs -->
     <script defer src="abcdxyz.js"></script>
     <script defer src="alphuck.js"></script>
     <script defer src="aplwsi.js"></script>
@@ -50,6 +52,7 @@
     <script defer src="rbf.js"></script>
     <script defer src="reversefuck.js"></script>
     <script defer src="six.js"></script>
+    <script defer src="slet.js"></script>
     <script defer src="smbf.js"></script>
     <script defer src="smbf_sharp.js"></script>
     <script defer src="text.js"></script>
@@ -96,6 +99,7 @@
       <option>ReverseFuck</option>
       <option>Self-modifying Brainfuck</option>
       <option>Self-modifying Brainfuck&#35;</option>
+      <option>SLet</option>
       <option>Text</option>
       <option>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>
       <option>
@@ -147,6 +151,7 @@
           funcs["ReverseFuck"] = reversefuck;
           funcs["Self-modifying Brainfuck"] = smbf;
           funcs["Self-modifying Brainfuck#"] = smbf_sharp;
+          funcs["SLet"] = slet;
           funcs["Text"] = text;
           funcs["Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee"] = wee;
           funcs[
