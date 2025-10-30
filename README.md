@@ -1,7 +1,3 @@
-Python 3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> k=open('README.md',encoding='utf-8').read()
->>> print(k)
 Interpret Esolangs Online is a webpage that can execute esoteric languages online.
 
 It currently supports the following:
@@ -17,9 +13,9 @@ It currently supports the following:
 * [!!brainfeed](https://esolangs.org/wiki/!!brainfeed)
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
 * [Chicken](https://esolangs.org/wiki/Chicken)
-* [&gt;&lt;x&gt;](https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E)
+* [&gt;&lt;x&gt;](https://esolangs.org/wiki/Dead_fish)
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
-* [›*&«&^](https://esolangs.org/wiki/
+* [�?&«&^](https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E)
 * [Hello](https://esolangs.org/wiki/Hello)
 * [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
