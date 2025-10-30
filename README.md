@@ -15,7 +15,7 @@ It currently supports the following:
 * [Chicken](https://esolangs.org/wiki/Chicken)
 * [&gt;&lt;x&gt;](https://esolangs.org/wiki/Dead_fish)
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
-* [�?&«&^](https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E)
+* [›*&«&^](https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E)
 * [Hello](https://esolangs.org/wiki/Hello)
 * [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
