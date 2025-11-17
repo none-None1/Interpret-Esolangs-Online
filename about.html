@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>About Interpret Esolangs Online</title>
   </head>
   <body>
+    <button
+      class="right"
+      onclick="document.documentElement.classList.toggle('dark-mode'),document.getElementById('mode').classList.toggle('fa-sun'),document.getElementById('mode').classList.toggle('fa-moon'),localStorage.setItem('mode',localStorage.getItem('mode')=='dark'?'light':'dark')"
+    >
+      <i id="mode" class="fa fa-moon"></i>
+    </button>
+    <script>
+      if (localStorage.getItem("mode") === null) {
+        localStorage.setItem("mode", "light");
+      }
+      if (localStorage.getItem("mode") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+        document.getElementById("mode").classList.add("fa-sun");
+        document.getElementById("mode").classList.remove("fa-moon");
+      }
+    </script>
     <p>
-      Interpret Esolangs Online 3.0.1
+      Interpret Esolangs Online 3.1.0
       <br />
       This is a webpage that interprets esoteric languages in client-side
       JavaScript. Currently, this supports 42 languages.
       <br />
-      A new feature added allows execution of Python code via <a href="https://pyscript.net"
-        >PyScript</a
-      >
+      A new feature added allows execution of Python code via
+      <a href="https://pyscript.net">PyScript</a>
       <br />
       Here is the detailed information about the languages:
     </p>
@@ -164,7 +181,11 @@
         <tr>
           <td>›*&«&^</td>
           <td></td>
-          <td><a href="https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E">https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E</a></td>
+          <td>
+            <a href="https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E"
+              >https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E</a
+            >
+          </td>
           <td><a href="galax.js">galax.js</a></td>
         </tr>
         <tr>
@@ -321,6 +342,8 @@
             >
           </td>
           <td><a href="plusoroutput.js">plusorOutput.js</a></td>
+        </tr>
+
         <tr>
           <td>Poetic</td>
           <td>Supports wraps, EOF results in 0, 1000000 8-bit cells</td>
@@ -374,7 +397,11 @@
         <tr>
           <td>6</td>
           <td>There is so much names for this esolang</td>
-          <td><a href="https://esolangs.org/wiki/6">https://esolangs.org/wiki/6</a></td>
+          <td>
+            <a href="https://esolangs.org/wiki/6"
+              >https://esolangs.org/wiki/6</a
+            >
+          </td>
           <td><a href="six.js">six.js</a></td>
         </tr>
         <tr>
@@ -479,4 +506,3 @@
     <a href="index.html">Back to the main page</a>
   </body>
 </html>
-

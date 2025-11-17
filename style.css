@@ -1,0 +1,64 @@
+:root{
+    --bg-col: #ffffff;
+    --fg-col: #000000;
+    --link-col: #0000ff;
+}
+.dark-mode{
+    --bg-col: #121212;
+    --fg-col: #f0f0f0;
+    --link-col: #1e90ff;
+}
+h1{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+h2{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+h3{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+li{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+code{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+p{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+body{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+hr{
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+select{
+    border-color: var(--fg-col);
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+table{
+    border-color: var(--fg-col);
+    color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+textarea{
+    color: var(--fg-col);
+    border-color: var(--fg-col);
+    background-color: var(--bg-col);
+}
+a{
+    color: var(--link-col);
+}
+.right{
+    position: absolute;
+    right: 10px;
+}

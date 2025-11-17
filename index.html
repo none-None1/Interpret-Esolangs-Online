@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Interpret Esolangs Online</title>
   </head>
   <body>
@@ -10,6 +12,7 @@
     <link rel="stylesheet" href_="https://pyscript.net/releases/2025.5.1/core.css" id="pyscss">
     <!-- This script tag bootstraps PyScript -->
     <script type="module" src_="https://pyscript.net/releases/2025.5.1/core.js" id="pysjs"></script>
+    <button class="right" onclick="document.documentElement.classList.toggle('dark-mode'),document.getElementById('mode').classList.toggle('fa-sun'),document.getElementById('mode').classList.toggle('fa-moon'),localStorage.setItem('mode',localStorage.getItem('mode')=='dark'?'light':'dark')"><i id="mode" class="fa fa-moon"></i></button>
     <h3>Welcome to Interpret Esolangs Online</h3>
     <p>
       Interpret Esolangs Online allows you to run programs in various esoteric
@@ -109,6 +112,14 @@
       <option>Wizzcake+</option>
     </select>
     <script>
+      if(localStorage.getItem("mode")===null){
+        localStorage.setItem("mode","light");
+      }
+      if(localStorage.getItem("mode")==="dark"){
+        document.documentElement.classList.add('dark-mode');
+        document.getElementById('mode').classList.add('fa-sun');
+        document.getElementById('mode').classList.remove('fa-moon');
+      }
       document.addEventListener("DOMContentLoaded", function () {
         window.run = function () {
           var funcs = {};

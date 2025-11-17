@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <title>Contribution Guide</title>
     </head>
     <body>
+        <button
+      class="right"
+      onclick="document.documentElement.classList.toggle('dark-mode'),document.getElementById('mode').classList.toggle('fa-sun'),document.getElementById('mode').classList.toggle('fa-moon'),localStorage.setItem('mode',localStorage.getItem('mode')=='dark'?'light':'dark')"
+    >
+      <i id="mode" class="fa fa-moon"></i>
+    </button>
+        <script>
+      if (localStorage.getItem("mode") === null) {
+        localStorage.setItem("mode", "light");
+      }
+      if (localStorage.getItem("mode") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+        document.getElementById("mode").classList.add("fa-sun");
+        document.getElementById("mode").classList.remove("fa-moon");
+      }
+    </script>
        <h1>Contribution Guide</h1> 
        <p>
         Contribution to this website is welcomed. However, please read this guide before you contribute.
