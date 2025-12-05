@@ -51,3 +51,9 @@ You can also generate permanent links of programs. However, it you want to do th
 
 ### Interpreters
 Interpret Esolangs Online uses client-side JS to implement interpreters, but a new feature has been added in June 2025 to support the execution of Python code in client-side JS (thanks to [PyScript](https://pyscript.net)).
+
+*Note: If you fail to use the Python code execution feature, try appending the following text to your `hosts` file:*
+```text
+151.101.65.229 cdn.jsdelivr.net
+```
+Which redirects `cdn.jsdelivr.net` to `fastly.jsdelivr.net`.
