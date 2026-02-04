@@ -21,7 +21,7 @@
     <!-- Script for python execution -->
     <script defer src="pyexec.js"></script>
     <!-- Script for esolangs -->
-    <script defer src="abcdxyz.js"></script>
+    <script defer src="abcdxyz.js" type="module"></script>
     <script defer src="alphuck.js"></script>
     <script defer src="aplwsi.js"></script>
     <script defer src="arithmetic.js"></script>
@@ -31,6 +31,7 @@
     <script defer src="brainalpha.js"></script>
     <script defer src="brainfeed.js"></script>
     <script defer src="brainfuck.js"></script>
+    <script defer src="bx.js" type="module"></script>
     <script defer src="chicken.js"></script>
     <script defer src="dead_fish.js"></script>
     <script defer src="deadfish.js"></script>
@@ -55,7 +56,7 @@
     <script defer src="rbf.js"></script>
     <script defer src="reversefuck.js"></script>
     <script defer src="six.js"></script>
-    <script defer src="slet.js"></script>
+    <script defer src="slet.js" type="module"></script>
     <script defer src="smbf.js"></script>
     <script defer src="smbf_sharp.js"></script>
     <script defer src="text.js"></script>
@@ -77,6 +78,7 @@
       <option>Brainalpha</option>
       <option>!!brainfeed</option>
       <option>brainfuck</option>
+      <option>Brainfuck extended</option>
       <option>Chicken</option>
       <option>&gt;&lt;x&gt;</option>
       <option>Deadfish</option>
@@ -138,6 +140,7 @@
           funcs["Brainalpha"] = brainalpha;
           funcs["!!brainfeed"] = brainfeed;
           funcs["brainfuck"] = brainfuck;
+          funcs["Brainfuck extended"] = bx;
           funcs["Chicken"] = chicken;
           funcs["><x>"] = dead_fish;
           funcs["Deadfish"] = deadfish;

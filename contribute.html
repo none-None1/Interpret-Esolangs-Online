@@ -43,7 +43,7 @@
 
         The function name should not collide with function names of existing esolangs.
 
-        If you have a Python interpreter, add a Python file to link in the about.html file in the last step, and add a JavaScript file that calls the Python code (not the Python file) just like pyexec_example.html.
+        If you have a Python interpreter, add a Python file to link in the about.html file in the last step, and add a JavaScript file just like <code>pyexec_example.js</code>.
         <li>Add an <code>option</code> tag inside the <code>select</code> tag in the index.html file, the text should be the language name, like this:</li>
         <pre>
             &lt;option&gt;YourLang&lt;/option&gt;
@@ -53,7 +53,7 @@
         <pre>
             &lt;script defer src=&quot;yourlang.js&quot;&gt;&lt;/script&gt;
         </pre>
-        <code>script</code> tags should be sorted by their sources, in lexicographical order, just like the <code>option</code> tags.
+        <code>script</code> tags should be sorted by their sources, in lexicographical order, just like the <code>option</code> tags. <i>Note: If you use the Python code interpreting feature, your script should be a <b>module</b>.</i>
         <li></li>In the <code>run</code> function, add a line of code that maps the option of the new esolang to the function, like this:</li>
         <pre>
             funcs["YourLang"]=yourlang;

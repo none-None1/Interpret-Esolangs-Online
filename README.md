@@ -12,6 +12,7 @@ It currently supports the following:
 * [Brainalpha](https://esolangs.org/wiki/Brainalpha)
 * [!!brainfeed](https://esolangs.org/wiki/!!brainfeed)
 * [brainfuck](https://esolangs.org/wiki/brainfuck)
+* [Brainfuck extended](https://esolangs.org/wiki/bx)
 * [Chicken](https://esolangs.org/wiki/Chicken)
 * [&gt;&lt;x&gt;](https://esolangs.org/wiki/Dead_fish)
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
