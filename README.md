@@ -3,6 +3,7 @@ Interpret Esolangs Online is a webpage that can execute esoteric languages onlin
 It currently supports the following:
 * [6](https://esolangs.org/wiki/6)
 * [ABCDXYZ](https://esolangs.org/wiki/ABCDXYZ)
+* [ActionLang](https://esolangs.org/wiki/ActionLang)
 * [Alphuck](https://esolangs.org/wiki/Alphuck)
 * [APLWSI](https://esolangs.org/wiki/APLWSI)
 * [Arithmetic](https://esolangs.org/wiki/Arithmetic)
