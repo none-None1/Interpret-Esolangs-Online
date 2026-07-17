@@ -38,6 +38,7 @@
     >
       <i id="mode" class="fa fa-moon"></i>
     </button>
+    <h2 style="display:none" id="aug16"></h2>
     <h3>Welcome to Interpret Esolangs Online</h3>
     <p>
       Interpret Esolangs Online allows you to run programs in various esoteric
@@ -150,6 +151,11 @@
         document.documentElement.classList.add("dark-mode");
         document.getElementById("mode").classList.add("fa-sun");
         document.getElementById("mode").classList.remove("fa-moon");
+      }
+      if(new Date().getMonth()===7&&new Date().getDate()===16){
+        document.getElementById("aug16").style.display="block";
+        document.getElementById("aug16").style.color='red';
+        document.getElementById("aug16").innerText=`Interpret Esolangs Online is ${new Date().getFullYear() - 2023} years old today!`;
       }
       document.addEventListener("DOMContentLoaded", function () {
         window.run = function () {

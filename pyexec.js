@@ -22,7 +22,7 @@ function finish(err){
         stderr(`Program terminates in ${new Date().getTime() - window.pys_exec_start} ms successfully.`);
     }
 }
-function execute(code,ccode,input,mainfunct){
+function execute(code,ccode,input,mainfunct,config){
     window.pys_ccode=ccode;
     window.pys_input=input;
     code+=outredirect.replaceAll('@mainfunct',mainfunct);
@@ -33,6 +33,9 @@ function execute(code,ccode,input,mainfunct){
     document.getElementById('pysjs')['src']=document.getElementById('pysjs').getAttribute('src_');
     z=document.createElement('script');
     z['type']='py';
+    if(config){
+        z['config']=config;
+    }
     z.textContent=code;
     document.body.appendChild(z);
 }
