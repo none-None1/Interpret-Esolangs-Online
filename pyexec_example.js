@@ -6,6 +6,6 @@ with the appropriate names for your esolang.
 let resp=await fetch('yourlang.py');
 var yourlang_py_code=await resp.text();
 function yourlang(code,input){
-    execute(yourlang_py_code,code,input,'yourlang');
+    execute(yourlang_py_code,code,input,'yourlang',['packages','if','needed']);
 }
 window.yourlang=yourlang;
