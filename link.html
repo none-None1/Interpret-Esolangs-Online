@@ -49,7 +49,7 @@
       }
     </style>
     <h3 id="link_t" class="withdrawn">Raw Link</h3>
-    <button data-clipboard-target="#link" class="btn">Copy</button>
+    <button data-clipboard-target="#link" class="btn withdrawn" id="link_b">Copy</button>
     <textarea
       id="link"
       cols="80"
@@ -59,15 +59,15 @@
     ></textarea
     ><br />
     <h3 id="md_t" class="withdrawn">Markdown</h3>
-    <button data-clipboard-target="#md" class="btn">Copy</button>
+    <button data-clipboard-target="#md" class="btn withdrawn" id="md_b">Copy</button>
     <textarea id="md" cols="80" rows="20" readonly class="withdrawn"></textarea
     ><br />
     <h3 id="mw_t" class="withdrawn">MediaWiki</h3>
-    <button data-clipboard-target="#mw" class="btn">Copy</button>
+    <button data-clipboard-target="#mw" class="btn withdrawn" id="mw_b">Copy</button>
     <textarea id="mw" cols="80" rows="20" readonly class="withdrawn"></textarea
     ><br />
     <h3 id="ht_t" class="withdrawn">HTML</h3>
-    <button data-clipboard-target="#ht" class="btn">Copy</button>
+    <button data-clipboard-target="#ht" class="btn withdrawn" id="ht_b">Copy</button>
     <textarea id="ht" cols="80" rows="20" readonly class="withdrawn"></textarea
     ><br />
     <script>
@@ -87,16 +87,20 @@
         var lang = decodeURIComponent(debase64[0]);
         document.getElementById("link").className = "shown";
         document.getElementById("link_t").className = "shown";
+        document.getElementById("link_b").className = "btn shown";
         document.getElementById("link").value = decoded;
         document.getElementById("md").className = "shown";
         document.getElementById("md_t").className = "shown";
+        document.getElementById("md_b").className = "btn shown";
         document.getElementById("md").value =
           "[" + lang + "]" + "(" + decoded + ")";
         document.getElementById("mw").className = "shown";
         document.getElementById("mw_t").className = "shown";
+        document.getElementById("mw_b").className = "btn shown";
         document.getElementById("mw").value = "[" + decoded + " " + lang + "]";
         document.getElementById("ht").className = "shown";
         document.getElementById("ht_t").className = "shown";
+        document.getElementById("ht_b").className = "btn shown";
         document.getElementById("ht").value =
           `<a href="${decoded}">${lang}</a>`;
       }
