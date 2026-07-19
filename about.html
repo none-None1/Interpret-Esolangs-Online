@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="UTF-8" />
   <head>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
@@ -7,6 +8,7 @@
     <title>About Interpret Esolangs Online</title>
   </head>
   <body>
+    <script src="supported_since.js"></script>
     <button
       class="right"
       onclick="document.documentElement.classList.toggle('dark-mode'),document.getElementById('mode').classList.toggle('fa-sun'),document.getElementById('mode').classList.toggle('fa-moon'),localStorage.setItem('mode',localStorage.getItem('mode')=='dark'?'light':'dark')"
@@ -52,6 +54,7 @@
           <th>Information about interpreter</th>
           <th>Link to esolangs.org</th>
           <th>Interpreter source code</th>
+          <th>Supported Since</th>
         </tr>
       </thead>
       <tbody>
@@ -428,7 +431,7 @@
         </tr>
         <tr>
           <td>6</td>
-          <td>There is so much names for this esolang</td>
+          <td>There are so much names for this esolang</td>
           <td>
             <a href="https://esolangs.org/wiki/6"
               >https://esolangs.org/wiki/6</a
@@ -545,6 +548,7 @@
       </tbody>
     </table>
     <hr />
+    <script>for(let i of document.getElementsByTagName('tr')){if(i.children.length==4){t=document.createElement('td');t.innerText=supported_since[i.children[3].innerText.split('.')[0]];i.appendChild(t)}};</script>
     <a href="index.html">Back to the main page</a>
   </body>
 </html>
