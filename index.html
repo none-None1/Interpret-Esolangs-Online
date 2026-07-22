@@ -46,6 +46,13 @@
     </p>
     <!-- Script for python execution -->
     <script defer src="pyexec.js"></script>
+    <!-- Load WASM modules -->
+    <script defer src="brain-crack/bc_em.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        [BrainFlakModule]=await Promise.all([createBrainFlak()]);
+      });
+    </script>
     <!-- Script for esolangs -->
     <script defer src="actionlang.js"></script>
     <script defer src="abcdxyz.js" type="module"></script>
@@ -57,6 +64,7 @@
     <script defer src="bfp2.js"></script>
     <script defer src="brainalpha.js"></script>
     <script defer src="brainfeed.js"></script>
+    <script defer src="brainflak.js"></script>
     <script defer src="brainfuck.js"></script>
     <script defer src="bx.js" type="module"></script>
     <script defer src="chicken.js"></script>
@@ -103,6 +111,7 @@
       <option>Arithmetic</option>
       <option>B2C</option>
       <option>Befunge-93</option>
+      <option>Brain-Flak (Add 'a' before code to enable ASCII mode)</option>
       <option>Brainfuck+2</option>
       <option>Brainalpha</option>
       <option>!!brainfeed</option>
@@ -175,6 +184,7 @@
           funcs["Brainfuck+2"] = bfp2;
           funcs["Brainalpha"] = brainalpha;
           funcs["!!brainfeed"] = brainfeed;
+          funcs["Brain-Flak (Add 'a' before code to enable ASCII mode)"] = brainflak;
           funcs["brainfuck"] = brainfuck;
           funcs["Brainfuck extended"] = bx;
           funcs["Chicken"] = chicken;
