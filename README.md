@@ -25,6 +25,7 @@ It currently supports the following:
 * [HWorld](https://esolangs.org/wiki/HWorld)
 * [Kipple](https://esolangs.org/wiki/Kipple)
 * [&lt;stack&gt;](https://esolangs.org/wiki/LstackG)
+* [Methemetics](https://esolangs.org/wiki/Methemetics)
 * [Nil](https://esolangs.org/wiki/Nil)
 * [No.](https://esolangs.org/wiki/No%2E)
 * [Nope.](https://esolangs.org/wiki/Nope%2E)
