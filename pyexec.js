@@ -34,7 +34,7 @@ function execute(code,ccode,input,mainfunct,packages){
     z=document.createElement('script');
     z['type']='py';
     if(packages){
-        z['config']=JSON.stringify({'packages':packages});
+        z.setAttribute('config',JSON.stringify({'packages':packages}));
     }
     z.textContent=code;
     document.body.appendChild(z);
