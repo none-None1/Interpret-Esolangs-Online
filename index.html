@@ -70,6 +70,7 @@
     <script defer src="chicken.js"></script>
     <script defer src="dead_fish.js"></script>
     <script defer src="deadfish.js"></script>
+    <script defer src="deadfisht.js"></script>
     <script defer src="galax.js"></script>
     <script defer src="hello.js"></script>
     <script defer src="hellopp.js"></script>
@@ -123,6 +124,7 @@
       <option>Chicken</option>
       <option>&gt;&lt;x&gt;</option>
       <option>Deadfish</option>
+      <option>Deadfish~</option>
       <option>›*&«&^</option>
       <option>Hello</option>
       <option>Hello++</option>
@@ -196,6 +198,7 @@
           funcs["Chicken"] = chicken;
           funcs["><x>"] = dead_fish;
           funcs["Deadfish"] = deadfish;
+          funcs["Deadfish~"] = deadfisht;
           funcs["Hello"] = hello;
           funcs["Hello++"] = hellopp;
           funcs["HQ9+"] = hq9p;
@@ -247,6 +250,7 @@
               document.getElementById("log").value =
                 document.getElementById("log").value +
                 `Program terminates in ${e - s} ms and raises an error.`;
+              document.getElementById("output").value = '';
             } else {
               document.getElementById("log").value =
                 document.getElementById("log").value +
