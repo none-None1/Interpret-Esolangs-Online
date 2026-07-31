@@ -20,6 +20,7 @@ It currently supports the following:
 * [Deadfish](https://esolangs.org/wiki/Deadfish)
 * [Deadfish~](https://esolangs.org/wiki/Deadfish~)
 * [›*&«&^](https://esolangs.org/wiki/%E2%80%BA*%26%C2%AB%26%5E)
+* [Gofe](https://esolangs.org/wiki/Gofe)
 * [Hello](https://esolangs.org/wiki/Hello)
 * [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
