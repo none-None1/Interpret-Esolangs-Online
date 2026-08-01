@@ -17,7 +17,7 @@ supported_since = {
   deadfisht: "2026-07-30",
   dead_fish: "2025-06-27",
   galax: "2024-12-14",
-  gofe: "2026-07-31",
+  gofe: "2026-08-01",
   hello: "2023-08-16",
   hellopp: "2023-08-20",
   hq9p: "2023-08-16",
