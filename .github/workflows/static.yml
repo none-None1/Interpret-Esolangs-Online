@@ -31,13 +31,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Upload the static site directory (adjust to the directory containing your built site)
+          # If you don't have a build step, set path to the directory that contains the static site (e.g. ./public or ./docs).
           path: '.'
+          # Use a run-unique artifact name to avoid collisions when multiple artifacts exist
+          name: github-pages-${{ github.run_id }}
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          # Explicitly target the artifact we uploaded
+          artifact-name: github-pages-${{ github.run_id }}
