@@ -4,8 +4,15 @@ function chicken(program,input){
     }
     var cmd=[];
     var stack=[];
-    for(let i of program.split('\n')){
-        cmd.push(i.split(' ').filter(x => x=='chicken').length);
+    var minichicken=!program.includes('chicken');
+    if(minichicken){
+        for(let i of program.split(' ')){
+            cmd.push(parseInt(i));
+        }
+    }else{
+        for(let i of program.split('\n')){
+            cmd.push(i.split(' ').filter(x => x=='chicken').length);
+        }
     }
     stack.push(undefined);
     stack.push(input);
