@@ -12,6 +12,7 @@ supported_since = {
   "brain-crack": "2026-07-22",
   brainfuck: "2023-08-16",
   bx: "2026-02-04",
+  ccccc: "2026-08-09",
   chicken: "2024-07-04",
   deadfish: "2023-08-16",
   deadfisht: "2026-07-30",
