@@ -30,6 +30,7 @@ supported_since = {
   no: "2023-08-16",
   nope: "2023-08-16",
   ooocode: "2023-08-28",
+  ork: "2026-08-12",
   plusintminus: "2024-09-01",
   plusintoutput: "2024-09-01",
   plusorminus: "2024-09-01",
