@@ -49,6 +49,7 @@ supported_since = {
   text: "2023-08-16",
   trigbf: "2026-07-28",
   trigbf_improved: "2026-07-29",
+  typeid: "2026-08-19",
   underload: "2026-07-13",
   wee: "2025-06-27",
   wizzcake: "2024-09-25",

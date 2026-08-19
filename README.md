@@ -49,6 +49,7 @@ It currently supports the following:
 * [Text](https://esolangs.org/wiki/Text)
 * [Trigbf](https://esolangs.org/wiki/Trigbf)
 * [Trigbf improved](https://esolangs.org/wiki/Trigbf_improved)
+* [Typeid](https://esolangs.org/wiki/Typeid)
 * [Underload](https://esolangs.org/wiki/Underload)
 * [Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee](https://esolangs.org/wiki/Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee)
 * [Welcome to Esolang, the esoteric programming languages wiki!](https://esolangs.org/wiki/Welcome_to_Esolang,_the_esoteric_programming_languages_wiki!)

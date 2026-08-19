@@ -42,7 +42,7 @@
     <h3>Welcome to Interpret Esolangs Online</h3>
     <p>
       Interpret Esolangs Online allows you to run programs in various esoteric
-      languages, including brainfuck, deadfish, etc.
+      languages, including brainfuck, Deadfish, etc.
     </p>
     <!-- Script for python execution -->
     <script defer src="pyexec.js"></script>
@@ -54,8 +54,8 @@
       });
     </script>
     <!-- Script for esolangs -->
-    <script defer src="actionlang.js"></script>
     <script defer src="abcdxyz.js"></script>
+    <script defer src="actionlang.js"></script>
     <script defer src="alphuck.js"></script>
     <script defer src="aplwsi.js"></script>
     <script defer src="arithmetic.js"></script>
@@ -102,6 +102,7 @@
     <script defer src="text.js"></script>
     <script defer src="trigbf.js"></script>
     <script defer src="trigbf_improved.js"></script>
+    <script defer src="typeid.js"></script>
     <script defer src="underload.js"></script>
     <script defer src="wee.js"></script>
     <script defer src="wte_teplw.js"></script>
@@ -158,6 +159,7 @@
       <option>Text</option>
       <option>Trigbf</option>
       <option>Trigbf improved</option>
+      <option>Typeid</option>
       <option>Underload</option>
       <option>Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>
       <option>
@@ -234,6 +236,7 @@
           funcs["Text"] = text;
           funcs["Trigbf"] = trigbf;
           funcs["Trigbf improved"] = trigbf_improved;
+          funcs["Typeid"] = typeid;
           funcs["Underload"] = underload;
           funcs["Weeeeeeeeeeeeeeeeeeeeeeeeeeeeee"] = wee;
           funcs[
