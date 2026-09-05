@@ -51,7 +51,12 @@
     <script defer src="ibf/ibf_em.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
-        [BrainFlakModule,IBFModule]=await Promise.all([createBrainFlak(),createIBF()]);
+        window.wasmReady = Promise.all([createBrainFlak(), createIBF()]).then(
+          ([brainFlakModule, ibfModule]) => {
+            window.BrainFlakModule = brainFlakModule;
+            window.IBFModule = ibfModule;
+          },
+        );
       });
     </script>
     <!-- Script for esolangs -->
@@ -186,11 +191,17 @@
         document.getElementById("aug16").innerText=`Interpret Esolangs Online is ${new Date().getFullYear() - 2023} years old today!`;
       }
       document.addEventListener("DOMContentLoaded", function () {
-        window.run = function () {
+        window.run = async function () {
           var funcs = {};
           var langname = document.getElementById("lang").value;
           var code = document.getElementById("program").value;
           var input = document.getElementById("input").value;
+          if (
+            langname === "Brain-Flak (Add 'a' before code to enable ASCII mode)" ||
+            langname === "Immutable Brainfuck"
+          ) {
+            await window.wasmReady;
+          }
           funcs["\u203a*&\u00ab&^"] = galax;
           funcs["6"] = six;
           funcs["ABCDXYZ"] = abcdxyz;
