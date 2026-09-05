@@ -109,7 +109,7 @@
       import ClipboardJS from "https://fastly.jsdelivr.net/npm/clipboard/+esm";
       var clipboard = new ClipboardJS(".btn");
       clipboard.on("success", function (e) {
-        alert("Copyied successfully");
+        alert("Copied successfully");
         e.clearSelection();
       });
       clipboard.on("error", function (e) {

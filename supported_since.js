@@ -23,6 +23,7 @@ supported_since = {
   hellopp: "2023-08-20",
   hq9p: "2023-08-16",
   hworld: "2023-08-28",
+  ibf_em: "2026-09-05",
   kipple: "2024-10-13",
   lstackg: "2023-08-16",
   methemetics: "2026-07-23",

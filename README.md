@@ -26,6 +26,7 @@ It currently supports the following:
 * [Hello++](https://esolangs.org/wiki/Hello%2B%2B)
 * [HQ9+](https://esolangs.org/wiki/HQ9%2B)
 * [HWorld](https://esolangs.org/wiki/HWorld)
+* [Immutable Brainfuck](https://esolangs.org/wiki/Immutable_Brainfuck)
 * [Kipple](https://esolangs.org/wiki/Kipple)
 * [&lt;stack&gt;](https://esolangs.org/wiki/LstackG)
 * [Methemetics](https://esolangs.org/wiki/Methemetics)

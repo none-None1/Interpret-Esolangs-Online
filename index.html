@@ -48,9 +48,10 @@
     <script defer src="pyexec.js"></script>
     <!-- Load WASM modules -->
     <script defer src="brain-crack/bc_em.js"></script>
+    <script defer src="ibf/ibf_em.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
-        [BrainFlakModule]=await Promise.all([createBrainFlak()]);
+        [BrainFlakModule,IBFModule]=await Promise.all([createBrainFlak(),createIBF()]);
       });
     </script>
     <!-- Script for esolangs -->
@@ -78,6 +79,7 @@
     <script defer src="hellopp.js"></script>
     <script defer src="hq9p.js"></script>
     <script defer src="hworld.js"></script>
+    <script defer src="ibf.js"></script>
     <script defer src="kipple.js"></script>
     <script defer src="lstackg.js"></script>
     <script defer src="methemetics.js"></script>
@@ -136,6 +138,7 @@
       <option>Hello++</option>
       <option>HQ9+</option>
       <option>HWorld</option>
+      <option>Immutable Brainfuck</option>
       <option>Kipple</option>
       <option>&lt;stack&gt;</option>
       <option>Methemetics</option>
@@ -213,6 +216,7 @@
           funcs["Hello++"] = hellopp;
           funcs["HQ9+"] = hq9p;
           funcs["HWorld"] = hworld;
+          funcs["Immutable Brainfuck"] = ibf;
           funcs["Kipple"] = kipple;
           funcs["<stack>"] = lstackg;
           funcs["Methemetics"] = methemetics;
